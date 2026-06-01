@@ -1,11 +1,122 @@
-body{
-    background-color:#0f172a;
-    color:white;
-    font-family:Arial,sans-serif;
-    text-align:center;
-    padding-top:100px;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
-h1{
-    color:#f59e0b;
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:#08142d;
+color:white;
+font-family:Arial,sans-serif;
+line-height:1.6;
+}
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 8%;
+background:#071022;
+position:sticky;
+top:0;
+}
+
+.logo img{
+height:70px;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:30px;
+}
+
+nav a{
+text-decoration:none;
+color:white;
+}
+
+.hero{
+text-align:center;
+padding:120px 20px;
+}
+
+.hero h1{
+font-size:4rem;
+color:#ffb000;
+margin-bottom:20px;
+}
+
+.hero p{
+max-width:700px;
+margin:auto;
+font-size:1.1rem;
+}
+
+.buttons{
+margin-top:30px;
+}
+
+.btn{
+display:inline-block;
+padding:12px 25px;
+background:#ffb000;
+color:#08142d;
+text-decoration:none;
+border-radius:8px;
+margin:10px;
+font-weight:bold;
+}
+
+.btn2{
+background:white;
+}
+
+section{
+padding:80px 10%;
+}
+
+h2{
+text-align:center;
+margin-bottom:40px;
+font-size:2.2rem;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.card{
+background:#102345;
+padding:25px;
+border-radius:12px;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+footer{
+text-align:center;
+padding:30px;
+background:#071022;
+}
+
+@media(max-width:768px){
+
+nav{
+flex-direction:column;
+}
+
+.hero h1{
+font-size:2.5rem;
+}
+
 }
