@@ -136,8 +136,18 @@ nav a{
     transition:0.3s;
 }
 
-nav a:hover{
-    color:#ffb000;
+nav{
+    background:#ffffff;
+    color:#071022;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+nav a{
+    color:#071022;
+}
+
+.logo span{
+    color:#071022;
 }
     
 .hero h1{
