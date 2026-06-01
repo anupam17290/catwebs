@@ -1,9 +1,11 @@
-body {
-  background-color: #0f172a;
-  color: white;
+body{
+    background-color:#0f172a;
+    color:white;
+    font-family:Arial,sans-serif;
+    text-align:center;
+    padding-top:100px;
 }
 
-h1 {
-  color: orange;
+h1{
+    color:#f59e0b;
 }
-
