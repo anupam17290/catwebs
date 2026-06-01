@@ -15,15 +15,6 @@ font-family:Arial,sans-serif;
 line-height:1.6;
 }
 
-nav{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 8%;
-background:#071022;
-position:sticky;
-top:0;
-}
 
 .logo img{
 height:70px;
