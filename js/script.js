@@ -1,16 +1,66 @@
-console.log("CatWebs Loaded");
+// ============================
+// CATWEBS SCRIPT v1.0
+// ============================
 
-const cards = document.querySelectorAll('.card');
+// MOBILE MENU
 
-cards.forEach(card => {
+const menuToggle = document.querySelector(".menu-toggle");
+const navMenu = document.querySelector(".nav-menu");
 
-card.addEventListener('mouseenter', () => {
-card.style.boxShadow =
-'0 10px 25px rgba(255,176,0,0.3)';
+if (menuToggle && navMenu) {
+    menuToggle.addEventListener("click", () => {
+        navMenu.classList.toggle("active");
+    });
+}
+
+// FAQ ACCORDION
+
+const faqItems = document.querySelectorAll(".faq-item");
+
+faqItems.forEach(item => {
+
+    item.addEventListener("click", () => {
+
+        faqItems.forEach(faq => {
+
+            if (faq !== item) {
+                faq.classList.remove("active");
+            }
+
+        });
+
+        item.classList.toggle("active");
+
+    });
+
 });
 
-card.addEventListener('mouseleave', () => {
-card.style.boxShadow = 'none';
+// SCROLL ANIMATION
+
+const fadeElements = document.querySelectorAll(".card");
+
+const observer = new IntersectionObserver((entries) => {
+
+    entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+
+            entry.target.classList.add("show");
+
+        }
+
+    });
+
+}, {
+    threshold: 0.15
 });
 
+fadeElements.forEach(element => {
+
+    element.classList.add("fade-up");
+
+    observer.observe(element);
+
 });
+
+console.log("CatWebs Loaded Successfully");
