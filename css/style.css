@@ -161,13 +161,25 @@ ul{
     align-items:center;
     justify-content:center;
     text-align:center;
+
     background:
+    radial-gradient(
+        circle at top right,
+        rgba(255,176,0,0.12),
+        transparent 35%
+    ),
+
+    radial-gradient(
+        circle at bottom left,
+        rgba(255,255,255,0.05),
+        transparent 40%
+    ),
+
     linear-gradient(
-    rgba(8,20,45,0.92),
-    rgba(8,20,45,0.96)
+        rgba(8,20,45,0.95),
+        rgba(8,20,45,0.98)
     );
 }
-
 .hero-content{
     max-width:900px;
 }
