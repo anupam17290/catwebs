@@ -1,66 +1,384 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | CatWebs</title>
 
-<title>Portfolio | CatWebs</title>
+    <meta name="description"
+        content="Explore CatWebs sample projects, website concepts, landing pages and digital solutions designed for business growth.">
 
-<link rel="icon" type="image/png" href="assets/icon.png">
+    <link rel="icon" href="assets/favicon.png">
+    <link rel="stylesheet" href="css/style.css">
 
-<link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
 
-<nav>
+    <!-- NAVBAR -->
 
-<div class="logo">
-<img src="assets/icon.png" alt="CatWebs Logo">
-<span>CatWebs</span>
-</div>
+    <nav class="navbar">
 
-<ul>
-<li><a href="index.html">Home</a></li>
-<li><a href="about.html">About</a></li>
-<li><a href="services.html">Services</a></li>
-<li><a href="portfolio.html" class="active">Portfolio</a></li>
-<li><a href="contact.html">Contact</a></li>
-</ul>
+        <div class="container nav-container">
 
-</nav>
+            <a href="index.html" class="logo">
+                <img src="assets/icon.png" alt="CatWebs">
+                <span>CatWebs</span>
+            </a>
 
-<section>
+            <div class="menu-toggle">☰</div>
 
-<h1>Our Portfolio</h1>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html" class="active">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
 
-<br>
+        </div>
 
-<div class="cards">
+    </nav>
 
-<div class="card">
-<h3>Business Website</h3>
-<p>Modern responsive business website with mobile optimization.</p>
-</div>
+    <!-- HERO -->
 
-<div class="card">
-<h3>Landing Page</h3>
-<p>Conversion-focused landing page for lead generation.</p>
-</div>
+    <section class="hero">
 
-<div class="card">
-<h3>Odoo Project</h3>
-<p>Business automation and workflow implementation project.</p>
-</div>
+        <div class="container hero-content">
 
-<div class="card">
-<h3>Academic Project</h3>
-<p>Research and technology-based web solution development.</p>
-</div>
+            <h1>
+                Our <span>Portfolio</span>
+            </h1>
 
-</div>
+            <p>
+                Showcasing sample projects, solution concepts and digital
+                experiences that demonstrate the capabilities of CatWebs.
+            </p>
 
-</section>
+        </div>
+
+    </section>
+
+    <!-- INTRO -->
+
+    <section class="section">
+
+        <div class="container">
+
+            <h2 class="section-title">
+                Featured Solutions
+            </h2>
+
+            <p class="section-subtitle">
+                Demonstration projects and solution concepts created to showcase
+                our expertise in web development and business technology.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- PROJECTS -->
+
+    <section class="section">
+
+        <div class="container">
+
+            <div class="grid grid-2">
+
+                <div class="card">
+
+                    <h3>Business Website Concept</h3>
+
+                    <p>
+                        A modern corporate website designed to improve
+                        credibility, customer engagement and lead generation.
+                    </p>
+
+                    <br>
+
+                    <strong>Category:</strong>
+                    Business Website
+
+                    <br><br>
+
+                    <strong>Technologies:</strong>
+
+                    <p>
+                        HTML • CSS • JavaScript
+                    </p>
+
+                </div>
+
+                <div class="card">
+
+                    <h3>Educational Institution Portal</h3>
+
+                    <p>
+                        A professional school or college website focused on
+                        admissions, notices and student information.
+                    </p>
+
+                    <br>
+
+                    <strong>Category:</strong>
+                    Education
+
+                    <br><br>
+
+                    <strong>Features:</strong>
+
+                    <p>
+                        Admissions • Notices • Forms • Student Resources
+                    </p>
+
+                </div>
+
+                <div class="card">
+
+                    <h3>Landing Page Campaign</h3>
+
+                    <p>
+                        A conversion-focused landing page designed for
+                        marketing campaigns and lead generation.
+                    </p>
+
+                    <br>
+
+                    <strong>Category:</strong>
+                    Marketing
+
+                    <br><br>
+
+                    <strong>Focus:</strong>
+
+                    <p>
+                        Leads • Enquiries • Admissions
+                    </p>
+
+                </div>
+
+                <div class="card">
+
+                    <h3>Business Automation Dashboard</h3>
+
+                    <p>
+                        A workflow management solution for streamlining
+                        operations and reducing repetitive manual work.
+                    </p>
+
+                    <br>
+
+                    <strong>Category:</strong>
+                    Automation
+
+                    <br><br>
+
+                    <strong>Capabilities:</strong>
+
+                    <p>
+                        Forms • Reporting • Workflow Management
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- TECHNOLOGIES -->
+
+    <section class="section">
+
+        <div class="container">
+
+            <h2 class="section-title">
+                Technologies We Work With
+            </h2>
+
+            <p class="section-subtitle">
+                Modern tools and technologies used to build reliable digital solutions.
+            </p>
+
+            <div class="grid grid-4">
+
+                <div class="card">
+                    <h3>HTML5</h3>
+                    <p>Modern semantic web development.</p>
+                </div>
+
+                <div class="card">
+                    <h3>CSS3</h3>
+                    <p>Responsive and visually engaging designs.</p>
+                </div>
+
+                <div class="card">
+                    <h3>JavaScript</h3>
+                    <p>Interactive and dynamic functionality.</p>
+                </div>
+
+                <div class="card">
+                    <h3>GitHub Pages</h3>
+                    <p>Reliable hosting and deployment.</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- FUTURE CLIENT SECTION -->
+
+    <section class="section">
+
+        <div class="container">
+
+            <h2 class="section-title">
+                Future Client Portfolio
+            </h2>
+
+            <p class="section-subtitle">
+                As CatWebs grows, this section will feature live client
+                projects and success stories.
+            </p>
+
+            <div class="card">
+
+                <h3>Coming Soon</h3>
+
+                <p>
+                    We are currently building our portfolio of client projects.
+                    Future case studies and success stories will be showcased here.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- WHY OUR APPROACH -->
+
+    <section class="section">
+
+        <div class="container">
+
+            <h2 class="section-title">
+                Our Approach
+            </h2>
+
+            <div class="grid grid-3">
+
+                <div class="card">
+                    <h3>Strategy First</h3>
+                    <p>Every project starts with understanding business goals.</p>
+                </div>
+
+                <div class="card">
+                    <h3>User Focused</h3>
+                    <p>Designed to create meaningful user experiences.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Growth Driven</h3>
+                    <p>Focused on measurable results and long-term success.</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- CTA -->
+
+    <section class="cta">
+
+        <div class="container">
+
+            <h2>
+                Have a Project in Mind?
+            </h2>
+
+            <p>
+                Let's discuss how CatWebs can help bring your ideas to life.
+            </p>
+
+            <a href="contact.html" class="btn btn-primary">
+                Start Your Project
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
+        <div class="container">
+
+            <div class="footer-grid">
+
+                <div>
+                    <h3>CatWebs</h3>
+                    <p>Your Digital Growth Partner.</p>
+                </div>
+
+                <div>
+
+                    <h3>Quick Links</h3>
+
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+
+                </div>
+
+                <div>
+
+                    <h3>Contact</h3>
+
+                    <p>factwithanupam@gmail.com</p>
+                    <p>+91 8076455953</p>
+
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                © 2026 CatWebs Business Technology Solutions.
+                All Rights Reserved.
+            </div>
+
+        </div>
+
+    </footer>
+
+    <a href="https://wa.me/918076455953"
+       class="whatsapp"
+       target="_blank">
+        💬
+    </a>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
+```
