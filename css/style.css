@@ -263,7 +263,12 @@ ul{
 }
 
 .card:hover{
-    transform:translateY(-5px);
+    transform:translateY(-8px);
+
+    box-shadow:
+    0 15px 35px rgba(255,176,0,.20);
+
+    border:1px solid rgba(255,176,0,.30);
 }
 
 .card h3{
