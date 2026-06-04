@@ -1,70 +1,42 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>LifeCare Multispeciality Hospital</title>
-
-<meta name="description"
-content="Advanced Healthcare & Compassionate Care">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="style.css">
-
-</head>
-
 <body>
 
 <!-- TOP BAR -->
 
 <div class="topbar">
 
-<div>📞 Emergency: +91 98765 43210</div>
+    <div>📞 Emergency: +91 98765 43210</div>
 
-<div>✉ care@lifecarehospital.com</div>
+    <div>✉ care@lifecarehospital.com</div>
 
-<div>🕒 Open 24×7</div>
+    <div>🕒 24x7 Emergency Services</div>
 
 </div>
 
 <!-- NAVBAR -->
 
-<nav>
+<nav class="navbar">
 
-<div class="logo">
-LifeCare Hospital
-</div>
+    <div class="logo">
 
-<ul>
+        LifeCare Hospital
 
-<li><a href="index.html">Home</a></li>
+    </div>
 
-<li><a href="about.html">About</a></li>
+    <ul class="nav-links">
 
-<li><a href="doctors.html">Doctors</a></li>
+        <li><a href="#">Home</a></li>
 
-<li><a href="departments.html">Departments</a></li>
+        <li><a href="#specialities">Specialities</a></li>
 
-<li><a href="facilities.html">Facilities</a></li>
+        <li><a href="#doctors">Doctors</a></li>
 
-<li><a href="appointments.html">Appointments</a></li>
+        <li><a href="#contact">Contact</a></li>
 
-<li><a href="contact.html">Contact</a></li>
+    </ul>
 
-</ul>
-
-<a href="appointments.html" class="nav-btn">
-
-Book Appointment
-
-</a>
+    <a href="appointments.html" class="appointment-btn">
+        Book Appointment
+    </a>
 
 </nav>
 
@@ -72,398 +44,232 @@ Book Appointment
 
 <section class="hero">
 
-<div class="hero-left">
+    <div class="hero-left">
 
-<span class="hero-badge">
+        <span class="hero-badge">
+            Trusted Healthcare Since 2005
+        </span>
 
-Advanced Healthcare
+        <h1>
 
-</span>
+            Advanced Healthcare
 
-<h1>
+            <span>For Every Family</span>
 
-Compassionate Care
-for Every Family
+        </h1>
 
-</h1>
+        <p>
 
-<p>
+            LifeCare Hospital provides world-class
+            treatment through expert doctors,
+            modern infrastructure and patient-first care.
 
-Providing world-class healthcare services with
-modern medical technology and experienced doctors.
+        </p>
 
-</p>
+        <div class="hero-buttons">
 
-<div class="hero-buttons">
+            <a href="appointments.html" class="btn-primary">
 
-<a href="#appointment" class="btn-primary">
+                Book Appointment
 
-Book Appointment
+            </a>
 
-</a>
+            <a href="tel:+919876543210" class="btn-secondary">
 
-<a href="tel:+919876543210"
-class="btn-secondary">
+                Emergency Call
 
-Emergency Call
+            </a>
 
-</a>
+        </div>
 
-</div>
+    </div>
 
-</div>
+    <div class="hero-right">
 
-<div class="hero-right">
+        <img src="images/hero.png" alt="Doctor">
 
-<div class="image-placeholder">
-
-HERO HOSPITAL IMAGE
-
-</div>
-
-</div>
+    </div>
 
 </section>
 
-<!-- STATS -->
-
-<section class="stats">
-
-<div class="stat">
-
-<h2>100+</h2>
-
-<p>Doctors</p>
-
-</div>
-
-<div class="stat">
-
-<h2>25+</h2>
-
-<p>Departments</p>
-
-</div>
-
-<div class="stat">
-
-<h2>500+</h2>
-
-<p>Beds</p>
-
-</div>
-
-<div class="stat">
-
-<h2>1 Lakh+</h2>
-
-<p>Patients Served</p>
-
-</div>
-
-</section>
-
-<!-- ABOUT -->
-
-<section class="section" id="about">
-
-<h2>About LifeCare Hospital</h2>
-
-<p class="section-text">
-
-LifeCare Multispeciality Hospital is committed to delivering
-advanced healthcare with compassion and excellence.
-Our experienced medical professionals and state-of-the-art
-infrastructure ensure quality treatment for every patient.
-
-</p>
-
-</section>
-
-<!-- DEPARTMENTS -->
-
-<section class="section" id="departments">
-
-<h2>Medical Departments</h2>
-
-<div class="grid-4">
-
-<div class="card">
-
-❤️
-
-<h3>Cardiology</h3>
-
-<p>Heart Care & Treatment</p>
-
-</div>
-
-<div class="card">
-
-🧠
-
-<h3>Neurology</h3>
-
-<p>Brain & Nerve Care</p>
-
-</div>
-
-<div class="card">
-
-🦴
-
-<h3>Orthopedics</h3>
-
-<p>Bone & Joint Care</p>
-
-</div>
-
-<div class="card">
-
-👶
-
-<h3>Pediatrics</h3>
-
-<p>Child Healthcare</p>
-
-</div>
-
-<div class="card">
-
-🦷
-
-<h3>Dental Care</h3>
-
-<p>Advanced Dentistry</p>
-
-</div>
-
-<div class="card">
-
-👩
-
-<h3>Gynecology</h3>
-
-<p>Women's Healthcare</p>
-
-</div>
-
-<div class="card">
-
-🔬
-
-<h3>Diagnostics</h3>
-
-<p>Laboratory Services</p>
-
-</div>
-
-<div class="card">
-
-🚑
-
-<h3>Emergency</h3>
-
-<p>24×7 Emergency Care</p>
-
-</div>
-
-</div>
+<!-- SPECIALITIES -->
+
+<section id="specialities" class="specialities">
+
+    <h2>Our Specialities</h2>
+
+    <div class="speciality-grid">
+
+        <div class="speciality-card">
+            ❤️
+            <h3>Cardiology</h3>
+            <p>Advanced heart care and surgery.</p>
+        </div>
+
+        <div class="speciality-card">
+            🧠
+            <h3>Neurology</h3>
+            <p>Brain and nervous system treatment.</p>
+        </div>
+
+        <div class="speciality-card">
+            🦴
+            <h3>Orthopaedics</h3>
+            <p>Joint replacement and trauma care.</p>
+        </div>
+
+        <div class="speciality-card">
+            👶
+            <h3>Pediatrics</h3>
+            <p>Specialized child healthcare.</p>
+        </div>
+
+    </div>
 
 </section>
 
 <!-- DOCTORS -->
 
-<section class="section" id="doctors">
+<section id="doctors" class="doctors">
 
-<h2>Our Specialists</h2>
+    <h2>Meet Our Specialists</h2>
 
-<div class="grid-3">
+    <div class="doctor-grid">
 
-<div class="doctor-card">
+        <div class="doctor-card">
 
-<div class="doctor-image">
+            <img src="images/faculty1.png">
 
-DOCTOR PHOTO
+            <h3>Dr. Rajesh Sharma</h3>
 
-</div>
+            <p>Senior Cardiologist</p>
 
-<h3>Dr. Amit Sharma</h3>
+        </div>
 
-<p>Cardiologist</p>
+        <div class="doctor-card">
 
-</div>
+            <img src="images/faculty2.png">
 
-<div class="doctor-card">
+            <h3>Dr. Priya Mehta</h3>
 
-<div class="doctor-image">
+            <p>Neurologist</p>
 
-DOCTOR PHOTO
+        </div>
 
-</div>
+        <div class="doctor-card">
 
-<h3>Dr. Neha Gupta</h3>
+            <img src="images/faculty3.png">
 
-<p>Neurologist</p>
+            <h3>Dr. Aman Gupta</h3>
 
-</div>
+            <p>Orthopaedic Surgeon</p>
 
-<div class="doctor-card">
+        </div>
 
-<div class="doctor-image">
-
-DOCTOR PHOTO
-
-</div>
-
-<h3>Dr. Rajeev Singh</h3>
-
-<p>Orthopedic Surgeon</p>
-
-</div>
-
-</div>
+    </div>
 
 </section>
 
-<!-- FACILITIES -->
+<!-- WHY US -->
 
-<section class="section">
+<section class="why-us">
 
-<h2>World Class Facilities</h2>
+    <div class="why-left">
 
-<div class="gallery">
+        <h2>Why Choose LifeCare?</h2>
 
-<div class="image-placeholder">
+        <ul>
 
-MRI ROOM
+            <li>✔ 100+ Specialist Doctors</li>
+            <li>✔ 24x7 Emergency Services</li>
+            <li>✔ NABH Standard Infrastructure</li>
+            <li>✔ Advanced ICU & Operation Theatres</li>
+            <li>✔ Patient-Centric Healthcare</li>
 
-</div>
+        </ul>
 
-<div class="image-placeholder">
+    </div>
 
-ICU
+    <div class="why-right">
 
-</div>
+        <img src="images/facility.png">
 
-<div class="image-placeholder">
-
-LABORATORY
-
-</div>
-
-<div class="image-placeholder">
-
-RECEPTION
-
-</div>
-
-</div>
+    </div>
 
 </section>
 
-<!-- TESTIMONIALS -->
+<!-- TECHNOLOGY -->
 
-<section class="section">
+<section class="technology">
 
-<h2>Patient Stories</h2>
+    <div class="tech-image">
 
-<div class="grid-3">
+        <img src="images/gallery1.png">
 
-<div class="testimonial">
+    </div>
 
-★★★★★
+    <div class="tech-content">
 
-<p>
+        <h2>
 
-Excellent doctors and caring staff.
+            Advanced Medical Technology
 
-</p>
+        </h2>
 
-<b>Rahul Verma</b>
+        <p>
 
-</div>
+            State-of-the-art MRI, CT Scan,
+            ICU, Cath Lab and Digital Diagnostics
+            ensuring world-class treatment.
 
-<div class="testimonial">
+        </p>
 
-★★★★★
-
-<p>
-
-Modern facilities and quick treatment.
-
-</p>
-
-<b>Anita Sharma</b>
-
-</div>
-
-<div class="testimonial">
-
-★★★★★
-
-<p>
-
-Highly recommended hospital.
-
-</p>
-
-<b>Suresh Gupta</b>
-
-</div>
-
-</div>
+    </div>
 
 </section>
 
-<!-- APPOINTMENT -->
+<!-- GALLERY -->
 
-<section
-class="appointment-section"
-id="appointment">
+<section class="gallery">
 
-<h2>
+    <h2>Hospital Infrastructure</h2>
 
-Book an Appointment
+    <div class="gallery-grid">
 
-</h2>
+        <img src="images/gallery1.png">
 
-<form>
+        <img src="images/gallery2.png">
 
-<input
-type="text"
-placeholder="Patient Name">
+        <img src="images/gallery3.png">
 
-<input
-type="tel"
-placeholder="Phone Number">
+        <img src="images/gallery4.png">
 
-<select>
+    </div>
 
-<option>Select Department</option>
+</section>
 
-<option>Cardiology</option>
+<!-- CTA -->
 
-<option>Neurology</option>
+<section class="cta">
 
-<option>Orthopedics</option>
+    <h2>
 
-<option>Pediatrics</option>
+        Your Health Deserves The Best Care
 
-</select>
+    </h2>
 
-<textarea
-placeholder="Message">
+    <p>
 
-</textarea>
+        Schedule your consultation with our
+        expert doctors today.
 
-<button>
+    </p>
 
-Book Appointment
+    <a href="appointments.html">
 
-</button>
+        Book Appointment
 
-</form>
+    </a>
 
 </section>
 
@@ -471,54 +277,26 @@ Book Appointment
 
 <footer id="contact">
 
-<div class="footer-grid">
+    <h3>LifeCare Hospital</h3>
 
-<div>
+    <p>
 
-<h3>LifeCare Hospital</h3>
+        Premium Multi-Speciality Healthcare Institution
 
-<p>
+    </p>
 
-Advanced Healthcare & Compassionate Care
+    <p>
 
-</p>
+        📞 +91 98765 43210
 
-</div>
+    </p>
 
-<div>
+    <p>
 
-<h3>Contact</h3>
+        ✉ care@lifecarehospital.com
 
-<p>+91 98765 43210</p>
-
-<p>care@lifecarehospital.com</p>
-
-</div>
-
-<div>
-
-<h3>Address</h3>
-
-<p>
-
-123 Healthcare Avenue,
-New Delhi, India
-
-</p>
-
-</div>
-
-</div>
-
-<div class="copyright">
-
-Demo Website by CatWebs
-
-</div>
+    </p>
 
 </footer>
 
-<script src="script.js"></script>
-
 </body>
-</html>
