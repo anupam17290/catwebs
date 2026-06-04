@@ -701,3 +701,129 @@ flex-direction:column;
 }
 
 }
+/* =====================================
+   SCROLL ANIMATION
+===================================== */
+
+.hidden-reveal{
+
+opacity:0;
+
+transform:translateY(40px);
+
+transition:all .8s ease;
+
+}
+
+.show-reveal{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+/* =====================================
+   WHATSAPP BUTTON
+===================================== */
+
+.floating-whatsapp{
+
+position:fixed;
+
+right:25px;
+
+bottom:25px;
+
+width:65px;
+
+height:65px;
+
+background:#25D366;
+
+color:white;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-size:28px;
+
+border-radius:50%;
+
+text-decoration:none;
+
+box-shadow:
+0 10px 30px rgba(0,0,0,.2);
+
+z-index:9999;
+
+transition:.3s;
+
+}
+
+.floating-whatsapp:hover{
+
+transform:scale(1.1);
+
+}
+
+/* =====================================
+   BACK TO TOP
+===================================== */
+
+#backToTop{
+
+position:fixed;
+
+right:25px;
+
+bottom:105px;
+
+width:55px;
+
+height:55px;
+
+border:none;
+
+border-radius:50%;
+
+background:#0f172a;
+
+color:white;
+
+font-size:22px;
+
+cursor:pointer;
+
+opacity:0;
+
+visibility:hidden;
+
+transition:.3s;
+
+z-index:9999;
+
+}
+
+#backToTop.show{
+
+opacity:1;
+
+visibility:visible;
+
+}
+
+/* =====================================
+   ACTIVE NAVIGATION
+===================================== */
+
+.active-nav{
+
+color:#38BDF8 !important;
+
+font-weight:700;
+
+}
