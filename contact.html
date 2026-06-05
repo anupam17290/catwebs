@@ -1,154 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Contact CatWebs | Initialize Your Project</title>
-    <meta name="description" content="Get in touch with CatWebs. Book a digital strategy call or request a custom proposal for your business in Greater Noida or Delhi NCR.">
-    <meta name="keywords" content="contact CatWebs, hire web developer Greater Noida, digital agency contact">
-    <meta name="author" content="CatWebs">
-
+    <title>Contact CatWebs | Get a Free Website Quote</title>
     <link rel="icon" href="assets/icon.png">
     <link rel="stylesheet" href="css/style.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
-    <nav class="agency-nav">
-        <div class="container nav-wrapper">
-            <a href="index.html" class="brand-logo">
-                <img src="assets/logo.png" alt="CatWebs Logo" class="logo-img">
-                <span class="brand-text">CatWebs.</span>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/icon.png" alt="CatWebs Logo">
+                <span>CatWebs</span>
             </a>
-
-            <div class="mobile-menu-trigger" aria-label="Toggle Menu">
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-            </div>
-
-            <ul class="nav-links">
-                <li><a href="index.html">Platform</a></li>
-                <li><a href="services.html">Expertise</a></li>
-                <li><a href="portfolio.html">Work</a></li>
-                <li><a href="about.html">Agency</a></li>
+            <div class="menu-toggle" id="mobile-menu">☰</div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
             </ul>
-
-            <div class="nav-actions">
-                <a href="contact.html" class="btn btn-nav active">Start a Project</a>
-            </div>
         </div>
     </nav>
 
-    <header class="hero-page hero-compact">
-        <div class="container hero-page-content align-center">
-            <h1 class="page-headline">
-                Initialize Your <span class="text-gradient">Project.</span>
-            </h1>
-            <p class="page-subtext">
-                Skip the generic templates. Partner with an agency that builds for revenue. 
-                Fill out the brief below to schedule your strategy call.
-            </p>
-        </div>
-    </header>
+    <section class="section bg-light">
+        <div class="container">
+            <h1 class="section-title">Let's Discuss Your Project</h1>
+            <p class="section-subtitle">Fill out the form below or reach us directly via WhatsApp. We usually respond within a few hours.</p>
 
-    <section class="section contact-section">
-        <div class="container split-layout">
-            
-            <div class="contact-info-block">
-                <h2>Direct Dispatch.</h2>
-                <p class="lead-text">Based in Greater Noida. Operating across the Delhi NCR.</p>
+            <div class="grid grid-2">
                 
-                <div class="contact-methods">
-                    <div class="method-item">
-                        <span class="method-label">Direct Email</span>
-                        <a href="mailto:hello@catwebs.in" class="method-link">hello@catwebs.in</a>
-                        <a href="mailto:support@catwebs.in" class="method-link">support@catwebs.in</a>
-                    </div>
-                    <div class="method-item">
-                        <span class="method-label">Direct Line</span>
-                        <a href="tel:+918076455953" class="method-link">+91 8076455953</a>
-                    </div>
-                    <div class="method-item">
-                        <span class="method-label">Instant Gateway</span>
-                        <p>For immediate project scoping, bypass the inbox and connect directly with our technical team.</p>
-                        <a href="https://wa.me/918076455953" target="_blank" class="btn btn-secondary mt-15">Open WhatsApp Chat &rarr;</a>
-                    </div>
+                <div class="card">
+                    <h3>Direct Contact</h3>
+                    <p>Based in Greater Noida. We are ready to help your business grow.</p>
+                    <br>
+                    <p><strong>Email:</strong><br> hello@catwebs.in</p>
+                    <br>
+                    <p><strong>Phone & WhatsApp:</strong><br> +91 8076455953</p>
+                    <br>
+                    <a href="https://wa.me/918076455953" target="_blank" class="btn btn-primary">Chat on WhatsApp</a>
                 </div>
-            </div>
 
-            <div class="contact-form-block glass-card">
-                <form action="#" method="POST" class="enterprise-form">
-                    <div class="form-row">
+                <div class="contact-form">
+                    <form action="https://api.web3forms.com/submit" method="POST">
+                        
+                        <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+                        
+                        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
                         <div class="form-group">
-                            <label for="name">Full Name</label>
-                            <input type="text" id="name" name="name" placeholder="John Doe" required>
+                            <label for="name">Your Name</label>
+                            <input type="text" name="name" id="name" placeholder="John Doe" required>
                         </div>
+
                         <div class="form-group">
-                            <label for="organization">Organization / Clinic</label>
-                            <input type="text" id="organization" name="organization" placeholder="e.g. LifeCare Hospital">
+                            <label for="business">Business Name (Optional)</label>
+                            <input type="text" name="business" id="business" placeholder="E.g., LifeCare Clinic">
                         </div>
-                    </div>
-                    
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="email">Work Email</label>
-                            <input type="email" id="email" name="email" placeholder="john@example.com" required>
-                        </div>
+
                         <div class="form-group">
                             <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" name="phone" placeholder="+91 00000 00000" required>
+                            <input type="tel" name="phone" id="phone" placeholder="+91 00000 00000" required>
                         </div>
-                    </div>
 
-                    <div class="form-group full-width">
-                        <label for="project-scope">Project Scope & Objectives</label>
-                        <textarea id="project-scope" name="project-scope" rows="5" placeholder="Briefly describe your current digital presence and what you want to achieve..." required></textarea>
-                    </div>
+                        <div class="form-group">
+                            <label for="message">How can we help you?</label>
+                            <textarea name="message" id="message" rows="4" placeholder="Tell us about the website you need..." required></textarea>
+                        </div>
 
-                    <button type="submit" class="btn btn-primary btn-large full-width">Submit Project Brief</button>
-                </form>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+
             </div>
-
         </div>
     </section>
 
-    <footer class="agency-footer">
-        <div class="container footer-layout">
-            <div class="footer-brand">
-                <img src="assets/logo.png" alt="CatWebs" class="footer-logo">
-                <p>Your Digital Growth Partner.<br>Serving visionary brands across Delhi NCR.</p>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h3>CatWebs</h3>
+                    <p>Your digital growth partner, proudly serving businesses in Greater Noida and Delhi NCR.</p>
+                </div>
+                <div>
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Contact Us</h3>
+                    <p>Email: hello@catwebs.in</p>
+                    <p>Phone: +91 8076455953</p>
+                </div>
             </div>
-            <div class="footer-links">
-                <h4>Solutions</h4>
-                <ul>
-                    <li><a href="services.html">Web Development</a></li>
-                    <li><a href="services.html">Local SEO</a></li>
-                    <li><a href="services.html">Lead Generation</a></li>
-                </ul>
+            <div class="footer-bottom">
+                &copy; 2026 CatWebs Business Technology Solutions. All Rights Reserved.
             </div>
-            <div class="footer-links">
-                <h4>Agency</h4>
-                <ul>
-                    <li><a href="about.html">Our Philosophy</a></li>
-                    <li><a href="portfolio.html">Case Studies</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                </ul>
-            </div>
-            <div class="footer-contact">
-                <h4>Direct Line</h4>
-                <p>hello@catwebs.in</p>
-                <p>+91 8076455953</p>
-            </div>
-        </div>
-        <div class="container footer-legal">
-            <p>&copy; 2026 CatWebs Business Technology Solutions. All rights reserved.</p>
-            <p class="location-tag">Engineered in Greater Noida</p>
         </div>
     </footer>
 
