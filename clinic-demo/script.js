@@ -1,278 +1,46 @@
-/* =====================================
-   LIFECARE HOSPITAL
-   MASTER JAVASCRIPT
-===================================== */
+/**
+ * CATWEBS: Demo Interactive Logic
+ * Simulates backend responses to create a premium frontend experience for prospects.
+ */
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener('DOMContentLoaded', () => {
+    
+    // --- 1. APPOINTMENT FORM DEMO LOGIC ---
+    const demoForm = document.getElementById('demoAppointmentForm');
+    
+    if (demoForm) {
+        demoForm.addEventListener('submit', function(event) {
+            event.preventDefault(); // Stop standard form submission
+            
+            const btn = document.getElementById('submitBtn');
+            const originalText = btn.innerText;
+            
+            // Step 1: Visual loading state
+            btn.innerText = 'Processing...';
+            btn.style.opacity = '0.8';
 
-    initializeCounters();
-    initializeRevealAnimations();
-    initializeBackToTop();
-    initializeFormHandling();
+            // Step 2: Simulate network request (1 second delay)
+            setTimeout(() => {
+                // Visual success state
+                btn.innerText = '✓ Appointment Requested Successfully';
+                btn.style.backgroundColor = 'var(--success-green)'; 
+                btn.style.opacity = '1';
 
-});
+                // Step 3: Agency Pitch Alert
+                setTimeout(() => {
+                    alert("CatWebs Demo Mode:\n\nIn a live environment, this form would instantly trigger a WhatsApp notification to your reception desk and securely log the patient's data into your system.");
+                    
+                    // Reset form for the next demo presentation
+                    demoForm.reset();
+                    btn.innerText = originalText;
+                    btn.style.backgroundColor = 'var(--medical-teal)'; // Reset to primary color
+                }, 800);
 
-/* =====================================
-   COUNTER ANIMATION
-===================================== */
-
-function initializeCounters() {
-
-    const counters = document.querySelectorAll(
-        ".stat h2, .stat-card h3"
-    );
-
-    const observer = new IntersectionObserver(entries => {
-
-        entries.forEach(entry => {
-
-            if (!entry.isIntersecting) return;
-
-            const element = entry.target;
-
-            const text = element.innerText;
-
-            const number = parseInt(
-                text.replace(/\D/g, "")
-            );
-
-            if (isNaN(number)) return;
-
-            let current = 0;
-
-            const increment = Math.ceil(
-                number / 100
-            );
-
-            const timer = setInterval(() => {
-
-                current += increment;
-
-                if (current >= number) {
-
-                    current = number;
-
-                    clearInterval(timer);
-
-                }
-
-                if (text.includes("Lakh")) {
-
-                    element.innerText =
-                        current + " Lakh+";
-
-                }
-
-                else if (text.includes("+")) {
-
-                    element.innerText =
-                        current + "+";
-
-                }
-
-                else {
-
-                    element.innerText =
-                        current;
-
-                }
-
-            }, 20);
-
-            observer.unobserve(element);
-
+            }, 1000);
         });
-
-    });
-
-    counters.forEach(counter => {
-
-        observer.observe(counter);
-
-    });
-
-}
-
-/* =====================================
-   SCROLL REVEAL
-===================================== */
-
-function initializeRevealAnimations() {
-
-    const elements = document.querySelectorAll(
-        ".card, .doctor-card, .doctor-profile, .stat, .stat-card"
-    );
-
-    elements.forEach(element => {
-
-        element.classList.add("hidden-reveal");
-
-    });
-
-    const observer = new IntersectionObserver(entries => {
-
-        entries.forEach(entry => {
-
-            if (entry.isIntersecting) {
-
-                entry.target.classList.add(
-                    "show-reveal"
-                );
-
-            }
-
-        });
-
-    }, {
-
-        threshold: 0.1
-
-    });
-
-    elements.forEach(element => {
-
-        observer.observe(element);
-
-    });
-
-}
-
-/* =====================================
-   FORM SUBMISSION
-===================================== */
-
-function initializeFormHandling() {
-
-    const forms = document.querySelectorAll("form");
-
-    forms.forEach(form => {
-
-        form.addEventListener("submit", event => {
-
-            event.preventDefault();
-
-            alert(
-                "Demo Website: Appointment Request Submitted Successfully."
-            );
-
-            form.reset();
-
-        });
-
-    });
-
-}
-
-/* =====================================
-   BACK TO TOP
-===================================== */
-
-function initializeBackToTop() {
-
-    const button = document.createElement("button");
-
-    button.innerHTML = "↑";
-
-    button.id = "backToTop";
-
-    document.body.appendChild(button);
-
-    button.addEventListener("click", () => {
-
-        window.scrollTo({
-
-            top: 0,
-
-            behavior: "smooth"
-
-        });
-
-    });
-
-    window.addEventListener("scroll", () => {
-
-        if (window.scrollY > 400) {
-
-            button.classList.add("show");
-
-        }
-
-        else {
-
-            button.classList.remove("show");
-
-        }
-
-    });
-
-}
-
-/* =====================================
-   FLOATING WHATSAPP BUTTON
-===================================== */
-
-const whatsappButton = document.createElement("a");
-
-whatsappButton.href =
-    "https://wa.me/918076455953";
-
-whatsappButton.target = "_blank";
-
-whatsappButton.className =
-    "floating-whatsapp";
-
-whatsappButton.innerHTML = "💬";
-
-document.body.appendChild(
-    whatsappButton
-);
-
-/* =====================================
-   NAVBAR SHADOW
-===================================== */
-
-window.addEventListener("scroll", () => {
-
-    const navbar =
-        document.querySelector("nav");
-
-    if (!navbar) return;
-
-    if (window.scrollY > 50) {
-
-        navbar.style.boxShadow =
-            "0 10px 40px rgba(0,0,0,.12)";
-
     }
 
-    else {
-
-        navbar.style.boxShadow =
-            "0 4px 20px rgba(0,0,0,.05)";
-
-    }
-
-});
-
-/* =====================================
-   ACTIVE NAVIGATION
-===================================== */
-
-const links =
-document.querySelectorAll("nav a");
-
-links.forEach(link => {
-
-    link.addEventListener("click", () => {
-
-        links.forEach(item => {
-
-            item.classList.remove("active-nav");
-
-        });
-
-        link.classList.add("active-nav");
-
-    });
-
+    // --- FUTURE ADDITIONS GO HERE ---
+    // e.g., Mobile Hamburger Menu Toggle
+    // e.g., Doctor Search Filtering
 });
