@@ -1,470 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Book Appointment | LifeCare Multispeciality Hospital</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="style.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment | LifeCare Hospital</title>
+    
+    <meta name="description" content="Book an appointment with elite medical specialists at LifeCare Hospital. Serving Greater Noida, Noida, and Delhi NCR.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
 </head>
-
-<body>
-
-<!-- TOP BAR -->
+<body class="page-appointment">
 
 <div class="topbar">
-
-<div>📞 Emergency: +91 98765 43210</div>
-
-<div>✉ care@lifecarehospital.com</div>
-
-<div>🕒 Open 24×7</div>
-
+    <div class="topbar-left">
+        <div class="topbar-item"><span class="emergency-highlight">🚨 Emergency Link:</span> <a href="tel:+919876543210"><strong>+91 98765 43210</strong></a></div>
+        <div class="topbar-item">✉️ care@lifecarehospital.com</div>
+    </div>
+    <div>🕒 24x7 Multi-Speciality Operational Infrastructure</div>
 </div>
 
-<!-- NAVBAR -->
-
-<nav>
-
-<div class="logo">
-LifeCare Hospital
-</div>
-
-<ul>
-
-<li><a href="index.html">Home</a></li>
-<li><a href="about.html">About</a></li>
-<li><a href="doctors.html">Doctors</a></li>
-<li><a href="departments.html">Departments</a></li>
-<li><a href="facilities.html">Facilities</a></li>
-<li><a href="appointments.html">Appointments</a></li>
-<li><a href="contact.html">Contact</a></li>
-
-</ul>
-
-<a href="appointments.html" class="nav-btn">
-Book Appointment
-</a>
-
+<nav class="navbar">
+    <div class="logo">
+        <div class="logo-dot"></div>
+        LifeCare Hospital
+    </div>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#specialities">Specialities</a></li>
+        <li><a href="index.html#doctors">Doctors</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
 </nav>
 
-<!-- HERO -->
+<header class="page-header" style="background-color: #F8FAFC; padding: 60px 5%; text-align: center; border-bottom: 1px solid #E2E8F0;">
+    <div class="header-content">
+        <span style="color: #0EA5E9; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 13px; display: block; margin-bottom: 10px;">Digital Intake Portal</span>
+        <h1 style="color: #0B1B3D; font-size: 42px; font-weight: 800; margin-bottom: 15px;">Schedule Your Consultation</h1>
+        <p style="color: #64748B; font-size: 18px; max-width: 600px; margin: 0 auto;">Connect with our primary intake coordinators to secure priority access to our board-certified medical specialists.</p>
+    </div>
+</header>
 
-<section class="page-hero">
+<section class="appointment-section" style="padding: 80px 5%; background-color: #FFFFFF;">
+    <div class="appointment-wrapper" style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: flex-start;">
+        
+        <div class="appointment-info">
+            <h2 style="color: #0B1B3D; font-size: 32px; font-weight: 800; margin-bottom: 20px;">Fast-Track Your Healthcare</h2>
+            <p style="color: #64748B; margin-bottom: 40px; font-size: 16px; line-height: 1.8;">Fill out the secure digital intake form to request a callback from our scheduling department. We prioritize urgent consults and specialized care protocols.</p>
+            
+            <div class="contact-details-grid" style="display: flex; flex-direction: column; gap: 25px; margin-bottom: 40px;">
+                <div class="contact-block" style="display: flex; gap: 15px; align-items: flex-start;">
+                    <span class="contact-icon" style="font-size: 24px; background: #F8FAFC; padding: 12px; border-radius: 50%;">📍</span>
+                    <div>
+                        <strong style="display: block; color: #0B1B3D; font-size: 18px; margin-bottom: 4px;">Primary Campus</strong>
+                        <span style="color: #64748B;">Greater Noida, Delhi NCR</span>
+                    </div>
+                </div>
+                <div class="contact-block" style="display: flex; gap: 15px; align-items: flex-start;">
+                    <span class="contact-icon" style="font-size: 24px; background: #F8FAFC; padding: 12px; border-radius: 50%;">📞</span>
+                    <div>
+                        <strong style="display: block; color: #0B1B3D; font-size: 18px; margin-bottom: 4px;">Direct Admissions</strong>
+                        <span style="color: #64748B;">+91 98765 43210</span>
+                    </div>
+                </div>
+                <div class="contact-block" style="display: flex; gap: 15px; align-items: flex-start;">
+                    <span class="contact-icon" style="font-size: 24px; background: #F8FAFC; padding: 12px; border-radius: 50%;">✉️</span>
+                    <div>
+                        <strong style="display: block; color: #0B1B3D; font-size: 18px; margin-bottom: 4px;">Patient Relations</strong>
+                        <span style="color: #64748B;">care@lifecarehospital.com</span>
+                    </div>
+                </div>
+            </div>
 
-<h1>Book an Appointment</h1>
+            <div class="trust-panel" style="background-color: #FEF2F2; border-left: 4px solid #F43F5E; padding: 20px; border-radius: 0 8px 8px 0;">
+                <p style="color: #9F1239; font-size: 14px; margin: 0;"><strong>Note for Emergencies:</strong> Please do not use this form for life-threatening emergencies. Call our 24/7 dispatch immediately.</p>
+            </div>
+        </div>
 
-<p>
+        <div class="appointment-form-container" style="background: #FFFFFF; padding: 40px; border-radius: 16px; box-shadow: 0 20px 40px rgba(15, 23, 42, 0.06); border: 1px solid #E2E8F0;">
+            
+            <form id="demoAppointmentForm" class="enterprise-form" onsubmit="handleDemoSubmit(event)">
+                
+                <div class="form-row" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px;">
+                    <div class="form-group" style="display: flex; flex-direction: column; gap: 8px;">
+                        <label for="patientName" style="font-weight: 600; font-size: 14px; color: #1E293B;">Patient Name</label>
+                        <input type="text" id="patientName" placeholder="Enter full name" required style="padding: 14px; border: 1px solid #CBD5E1; border-radius: 8px; outline: none; font-family: inherit;">
+                    </div>
+                    <div class="form-group" style="display: flex; flex-direction: column; gap: 8px;">
+                        <label for="patientPhone" style="font-weight: 600; font-size: 14px; color: #1E293B;">Phone / WhatsApp</label>
+                        <input type="tel" id="patientPhone" placeholder="+91 XXXXX XXXXX" required style="padding: 14px; border: 1px solid #CBD5E1; border-radius: 8px; outline: none; font-family: inherit;">
+                    </div>
+                </div>
 
-Connect with our specialists and receive quality healthcare.
+                <div class="form-row" style="margin-bottom: 20px;">
+                    <div class="form-group" style="display: flex; flex-direction: column; gap: 8px;">
+                        <label for="patientEmail" style="font-weight: 600; font-size: 14px; color: #1E293B;">Email Address</label>
+                        <input type="email" id="patientEmail" placeholder="email@example.com" style="padding: 14px; border: 1px solid #CBD5E1; border-radius: 8px; outline: none; width: 100%; box-sizing: border-box; font-family: inherit;">
+                    </div>
+                </div>
 
-</p>
+                <div class="form-row" style="margin-bottom: 20px;">
+                    <div class="form-group" style="display: flex; flex-direction: column; gap: 8px;">
+                        <label for="department" style="font-weight: 600; font-size: 14px; color: #1E293B;">Select Department</label>
+                        <select id="department" required style="padding: 14px; border: 1px solid #CBD5E1; border-radius: 8px; outline: none; width: 100%; box-sizing: border-box; font-family: inherit; background-color: #fff;">
+                            <option value="" disabled selected>Choose a Speciality...</option>
+                            <option value="Cardiology">Cardiology</option>
+                            <option value="Neurology">Neurology</option>
+                            <option value="Orthopaedics">Orthopaedics</option>
+                            <option value="Pediatrics">Pediatrics</option>
+                            <option value="General Medicine">General Medicine</option>
+                        </select>
+                    </div>
+                </div>
 
+                <div class="form-row" style="margin-bottom: 20px;">
+                    <div class="form-group" style="display: flex; flex-direction: column; gap: 8px;">
+                        <label for="appointmentDate" style="font-weight: 600; font-size: 14px; color: #1E293B;">Preferred Date</label>
+                        <input type="date" id="appointmentDate" style="padding: 14px; border: 1px solid #CBD5E1; border-radius: 8px; outline: none; width: 100%; box-sizing: border-box; font-family: inherit;">
+                    </div>
+                </div>
+
+                <div class="form-group" style="display: flex; flex-direction: column; gap: 8px; margin-bottom: 30px;">
+                    <label for="symptoms" style="font-weight: 600; font-size: 14px; color: #1E293B;">Brief Description of Symptoms</label>
+                    <textarea id="symptoms" rows="4" placeholder="Briefly describe your condition..." style="padding: 14px; border: 1px solid #CBD5E1; border-radius: 8px; outline: none; width: 100%; box-sizing: border-box; font-family: inherit; resize: vertical;"></textarea>
+                </div>
+
+                <button type="submit" id="submitBtn" style="background-color: #0EA5E9; color: white; border: none; padding: 16px; width: 100%; border-radius: 8px; font-weight: 700; font-size: 16px; cursor: pointer; transition: all 0.3s ease; font-family: inherit;">Request Appointment Slot</button>
+                <p class="form-disclaimer" style="text-align: center; font-size: 12px; color: #94A3B8; margin-top: 15px;">By submitting, you agree to receive scheduling updates via WhatsApp.</p>
+            </form>
+        </div>
+
+    </div>
 </section>
 
-<!-- APPOINTMENT FORM -->
-
-<section class="section">
-
-<div class="appointment-grid">
-
-<div class="appointment-form-container">
-
-<h2>Schedule Your Visit</h2>
-
-<form>
-
-<input
-type="text"
-placeholder="Patient Name"
-required>
-
-<input
-type="tel"
-placeholder="Mobile Number"
-required>
-
-<input
-type="email"
-placeholder="Email Address">
-
-<select required>
-
-<option>Select Department</option>
-
-<option>Cardiology</option>
-
-<option>Neurology</option>
-
-<option>Orthopedics</option>
-
-<option>Pediatrics</option>
-
-<option>Dental Care</option>
-
-<option>Gynecology</option>
-
-<option>Diagnostics</option>
-
-<option>Emergency Care</option>
-
-</select>
-
-<select>
-
-<option>Select Doctor</option>
-
-<option>Dr. Amit Sharma</option>
-
-<option>Dr. Priya Verma</option>
-
-<option>Dr. Neha Gupta</option>
-
-<option>Dr. Rajeev Singh</option>
-
-<option>Dr. Anjali Sharma</option>
-
-</select>
-
-<input
-type="date">
-
-<textarea
-rows="6"
-placeholder="Describe your health concern">
-
-</textarea>
-
-<button type="submit">
-
-Book Appointment
-
-</button>
-
-</form>
-
-</div>
-
-<div class="appointment-image">
-
-BOOK APPOINTMENT IMAGE
-
-</div>
-
-</div>
-
-</section>
-
-<!-- WHY BOOK WITH US -->
-
-<section class="section light-bg">
-
-<h2>Why Choose LifeCare Hospital?</h2>
-
-<div class="grid-4">
-
-<div class="card">
-
-👨‍⚕️
-
-<h3>Expert Doctors</h3>
-
-<p>
-
-Highly experienced specialists across multiple disciplines.
-
-</p>
-
-</div>
-
-<div class="card">
-
-⚡
-
-<h3>Quick Appointments</h3>
-
-<p>
-
-Easy scheduling and faster consultation access.
-
-</p>
-
-</div>
-
-<div class="card">
-
-🏥
-
-<h3>Modern Facilities</h3>
-
-<p>
-
-Advanced diagnostic and treatment infrastructure.
-
-</p>
-
-</div>
-
-<div class="card">
-
-❤️
-
-<h3>Patient Care</h3>
-
-<p>
-
-Compassionate healthcare focused on patient wellbeing.
-
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- EMERGENCY CARE -->
-
-<section class="section emergency-banner">
-
-<h2>
-
-🚑 Need Immediate Medical Attention?
-
-</h2>
-
-<p>
-
-Our emergency department operates 24 hours a day,
-7 days a week.
-
-</p>
-
-<br>
-
-<a href="tel:+919876543210"
-class="btn-primary">
-
-Call Emergency Helpline
-
-</a>
-
-</section>
-
-<!-- INSURANCE -->
-
-<section class="section">
-
-<h2>Insurance & Cashless Facilities</h2>
-
-<div class="grid-4">
-
-<div class="card">
-Star Health
-</div>
-
-<div class="card">
-Niva Bupa
-</div>
-
-<div class="card">
-ICICI Lombard
-</div>
-
-<div class="card">
-Care Health
-</div>
-
-</div>
-
-</section>
-
-<!-- HEALTH CHECKUP PACKAGES -->
-
-<section class="section light-bg">
-
-<h2>Popular Health Packages</h2>
-
-<div class="grid-3">
-
-<div class="card">
-
-<h3>Basic Health Checkup</h3>
-
-<p>
-
-General examination and blood tests.
-
-</p>
-
-<h4>₹2,999</h4>
-
-</div>
-
-<div class="card">
-
-<h3>Executive Health Package</h3>
-
-<p>
-
-Comprehensive health screening.
-
-</p>
-
-<h4>₹5,999</h4>
-
-</div>
-
-<div class="card">
-
-<h3>Senior Citizen Package</h3>
-
-<p>
-
-Preventive care for senior citizens.
-
-</p>
-
-<h4>₹4,499</h4>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- FAQ -->
-
-<section class="section">
-
-<h2>Frequently Asked Questions</h2>
-
-<div class="faq-box">
-
-<h3>How do I book an appointment?</h3>
-
-<p>
-
-Use the appointment form or call our helpline.
-
-</p>
-
-</div>
-
-<div class="faq-box">
-
-<h3>Do you provide cashless insurance?</h3>
-
-<p>
-
-Yes, we support major insurance providers.
-
-</p>
-
-</div>
-
-<div class="faq-box">
-
-<h3>Is emergency care available 24×7?</h3>
-
-<p>
-
-Yes, emergency services operate round the clock.
-
-</p>
-
-</div>
-
-</section>
-
-<!-- CTA -->
-
-<section class="appointment-section">
-
-<h2>
-
-Your Health Cannot Wait
-
-</h2>
-
-<p>
-
-Book an appointment today and connect with our specialists.
-
-</p>
-
-<br>
-
-<a href="#"
-class="btn-primary">
-
-Schedule Appointment
-
-</a>
-
-</section>
-
-<!-- FOOTER -->
-
-<footer>
-
-<div class="footer-grid">
-
-<div>
-
-<h3>LifeCare Hospital</h3>
-
-<p>
-
-Advanced Healthcare & Compassionate Care
-
-</p>
-
-</div>
-
-<div>
-
-<h3>Contact</h3>
-
-<p>+91 98765 43210</p>
-
-<p>care@lifecarehospital.com</p>
-
-</div>
-
-<div>
-
-<h3>Address</h3>
-
-<p>
-
-123 Healthcare Avenue,
-New Delhi, India
-
-</p>
-
-</div>
-
-</div>
-
-<div class="copyright">
-
-Demo Website by CatWebs
-
-</div>
-
+<footer id="contact" style="background-color: #030712; color: #94A3B8; padding: 80px 5% 40px 5%; font-size: 15px; border-top: 1px solid #1E293B;">
+    <div class="footer-wrapper" style="display: grid; grid-template-columns: 2fr 1fr; gap: 60px; margin-bottom: 60px; max-width: 1200px; margin-left: auto; margin-right: auto;">
+        <div>
+            <h3 style="color: white; font-size: 24px; margin-bottom: 16px; font-weight: 700;">LifeCare Hospital</h3>
+            <p>Premium Multi-Speciality Healthcare Institution. Dedicated to serving excellence across Greater Noida, Noida, and the Delhi NCR region.</p>
+        </div>
+        <div class="footer-contact-info">
+            <p style="margin-bottom: 12px;">📞 <strong style="color: white;">+91 98765 43210</strong></p>
+            <p style="margin-bottom: 12px;">✉️ <strong style="color: white;">care@lifecarehospital.com</strong></p>
+        </div>
+    </div>
+    <p style="text-align: center; font-size: 13px; color: #4B5563; padding-top: 20px; border-top: 1px solid #1F2937; max-width: 1200px; margin: 0 auto;">&copy; 2026 LifeCare Hospital System. All rights reserved.</p>
 </footer>
 
-<script src="script.js"></script>
+<script>
+    function handleDemoSubmit(event) {
+        event.preventDefault(); // Prevents the page from reloading
+        
+        const btn = document.getElementById('submitBtn');
+        const originalText = btn.innerText;
+        const originalColor = btn.style.backgroundColor;
+
+        // Visual loading state
+        btn.innerText = 'Processing...';
+        btn.style.opacity = '0.8';
+
+        setTimeout(() => {
+            // Visual success state
+            btn.innerText = '✓ Appointment Requested Successfully';
+            btn.style.backgroundColor = '#10B981'; // Emerald green
+            btn.style.opacity = '1';
+
+            // Alert for the pitch
+            setTimeout(() => {
+                alert("CatWebs Demo Mode:\n\nIn a live environment, this form would instantly trigger an SMS/WhatsApp notification to your reception desk and securely log the patient's data into your system.");
+                
+                // Reset form for next demo
+                document.getElementById('demoAppointmentForm').reset();
+                btn.innerText = originalText;
+                btn.style.backgroundColor = originalColor;
+            }, 800);
+
+        }, 1000);
+    }
+</script>
+
+<style>
+    @media (max-width: 968px) {
+        .appointment-wrapper { grid-template-columns: 1fr !important; }
+        .form-row { grid-template-columns: 1fr !important; }
+        .footer-wrapper { grid-template-columns: 1fr !important; text-align: center; }
+    }
+</style>
 
 </body>
 </html>
