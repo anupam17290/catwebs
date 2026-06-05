@@ -1,302 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LifeCare Hospital | Advanced Healthcare Services</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- ENTERPRISE DESIGN SYSTEM VARIABLES --- */
+        :root {
+            --medical-navy: #0B1B3D;
+            --medical-blue: #1D4ED8;
+            --medical-teal: #0EA5E9;
+            --text-dark: #1E293B;
+            --text-muted: #64748B;
+            --bg-light: #F8FAFC;
+            --bg-white: #FFFFFF;
+            --border-color: #E2E8F0;
+            --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        /* --- GLOBAL RESET & TYPOGRAPHY --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            color: var(--text-dark);
+            background-color: var(--bg-white);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        a { text-decoration: none; color: inherit; transition: var(--transition); }
+        ul { list-style: none; }
+        img { max-width: 100%; height: auto; display: block; }
+        
+        section { padding: 100px 5%; }
+        .section-header {
+            max-width: 700px;
+            margin-bottom: 60px;
+        }
+        .section-header span {
+            color: var(--medical-teal);
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 13px;
+            letter-spacing: 2px;
+            display: inline-block;
+            margin-bottom: 12px;
+        }
+        .section-header h2 {
+            font-size: 38px;
+            color: var(--medical-navy);
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+
+        /* --- TOP BAR --- */
+        .topbar {
+            background-color: var(--medical-navy);
+            color: #E2E8F0;
+            padding: 12px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 13px;
+            font-weight: 500;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+        .topbar-left { display: flex; gap: 24px; }
+        .topbar-item { display: flex; align-items: center; gap: 8px; }
+        .emergency-highlight {
+            color: #F43F5E;
+            font-weight: 700;
+            animation: pulse 2s infinite;
+        }
+
+        /* --- NAVBAR --- */
+        .navbar {
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 20px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 30px rgba(15, 23, 42, 0.03);
+            border-bottom: 1px solid var(--border-color);
+        }
+        .logo {
+            font-size: 22px;
+            font-weight: 800;
+            color: var(--medical-navy);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .logo-dot { width: 8px; height: 8px; background-color: var(--medical-teal); border-radius: 50%; }
+        .nav-links { display: flex; gap: 36px; }
+        .nav-links a {
+            font-weight: 600;
+            font-size: 15px;
+            color: var(--text-dark);
+        }
+        .nav-links a:hover { color: var(--medical-blue); }
+        .appointment-btn {
+            background-color: var(--medical-blue);
+            color: white !important;
+            padding: 12px 28px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 14px;
+            box-shadow: 0 10px 20px rgba(29, 78, 216, 0.15);
+        }
+        .appointment-btn:hover { background-color: var(--medical-navy); transform: translateY(-2px); }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            background: radial-gradient(100% 100% at 100% 0%, #EEF2F6 0%, #FFFFFF 100%);
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 60px;
+            align-items: center;
+            padding-top: 120px;
+            padding-bottom: 120px;
+        }
+        .hero-badge {
+            background-color: #EFF6FF;
+            color: var(--medical-blue);
+            padding: 8px 18px;
+            border-radius: 50px;
+            font-size: 13px;
+            font-weight: 700;
+            display: inline-block;
+            margin-bottom: 24px;
+        }
+        .hero h1 {
+            font-size: 56px;
+            color: var(--medical-navy);
+            line-height: 1.15;
+            font-weight: 800;
+            letter-spacing: -1.5px;
+            margin-bottom: 24px;
+        }
+        .hero h1 span {
+            color: var(--medical-blue);
+            display: block;
+        }
+        .hero p {
+            font-size: 18px;
+            color: var(--text-muted);
+            margin-bottom: 40px;
+            max-width: 540px;
+        }
+        
+        /* Simulated Enterprise Search Tool */
+        .search-simulator {
+            background: #ffffff;
+            padding: 10px 10px 10px 24px;
+            border-radius: 100px;
+            box-shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
+            display: flex;
+            align-items: center;
+            max-width: 580px;
+            margin-bottom: 40px;
+            border: 1px solid var(--border-color);
+        }
+        .search-input-wrapper { display: flex; align-items: center; flex-grow: 1; gap: 12px; }
+        .search-simulator input {
+            border: none;
+            outline: none;
+            width: 100%;
+            font-size: 15px;
+            color: var(--text-dark);
+            font-family: inherit;
+        }
+        .search-submit-btn {
+            background-color: var(--medical-navy);
+            color: white;
+            border: none;
+            padding: 14px 32px;
+            border-radius: 100px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .hero-buttons { display: flex; gap: 20px; align-items: center; }
+        .btn-primary {
+            background-color: var(--medical-teal);
+            color: white;
+            padding: 16px 36px;
+            border-radius: 8px;
+            font-weight: 600;
+        }
+        .btn-primary:hover { background-color: var(--medical-blue); transform: translateY(-2px); }
+        .btn-secondary {
+            font-weight: 700;
+            color: var(--medical-navy);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .btn-secondary:hover { color: var(--medical-blue); }
+        
+        .hero-right { position: relative; display: flex; justify-content: center; }
+        .hero-img-backdrop {
+            position: absolute;
+            width: 80%;
+            height: 100%;
+            background-color: #E2E8F0;
+            bottom: -30px;
+            border-radius: 24px;
+            z-index: 1;
+        }
+        .hero-right img {
+            position: relative;
+            z-index: 2;
+            border-radius: 24px;
+            box-shadow: 0 20px 40px rgba(15, 23, 42, 0.06);
+            /* Fallback mock graphic background if actual image isn't available */
+            background: #cbd5e1; 
+        }
+
+        /* --- SPECIALITIES (Clean rows, minimal boxes) --- */
+        .specialities { background-color: var(--bg-light); }
+        .speciality-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+        }
+        .speciality-card {
+            background-color: var(--bg-white);
+            padding: 40px 30px;
+            border-radius: 16px;
+            border: 1px solid rgba(226, 232, 240, 0.8);
+            transition: var(--transition);
+        }
+        .speciality-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(15, 23, 42, 0.05);
+            border-color: var(--medical-teal);
+        }
+        .speciality-icon {
+            font-size: 32px;
+            margin-bottom: 24px;
+            display: inline-block;
+        }
+        .speciality-card h3 {
+            font-size: 20px;
+            color: var(--medical-navy);
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+        .speciality-card p {
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+
+        /* --- DOCTORS SECTION (Editorial style frame) --- */
+        .doctor-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+        .doctor-card {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+        .doctor-img-wrapper {
+            background-color: #E2E8F0;
+            overflow: hidden;
+            aspect-ratio: 4/5;
+        }
+        .doctor-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        .doctor-card:hover img { transform: scale(1.05); }
+        .doctor-info {
+            padding: 24px 0;
+            background: var(--bg-white);
+        }
+        .doctor-info h3 {
+            font-size: 22px;
+            color: var(--medical-navy);
+            margin-bottom: 4px;
+            font-weight: 700;
+        }
+        .doctor-info p {
+            color: var(--medical-teal);
+            font-weight: 600;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1sspx;
+        }
+
+        /* --- WHY CHOOSE US (Staggered asymmetric split) --- */
+        .why-us {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+            background-color: var(--medical-navy);
+            color: white;
+        }
+        .why-left h2 { font-size: 42px; font-weight: 800; margin-bottom: 30px; letter-spacing: -0.5px;}
+        .why-list { display: flex; flex-direction: column; gap: 20px; }
+        .why-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            font-size: 16px;
+            color: #94A3B8;
+        }
+        .why-list li strong { color: white; display: block; margin-bottom: 2px; }
+        .why-icon-check {
+            background-color: rgba(14, 165, 233, 0.15);
+            color: var(--medical-teal);
+            padding: 4px;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+        .why-right img { border-radius: 20px; box-shadow: 0 30px 60px rgba(0,0,0,0.2); }
+
+        /* --- TECHNOLOGY SHOWCASE --- */
+        .technology {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+        .tech-image img { border-radius: 24px; }
+        .tech-content h2 { font-size: 40px; color: var(--medical-navy); font-weight: 800; margin-bottom: 24px; }
+        .tech-content p { color: var(--text-muted); font-size: 17px; margin-bottom: 30px; }
+
+        /* --- GALLERY (Modern Minimal Grid) --- */
+        .gallery { background-color: var(--bg-light); }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+        .gallery-grid img {
+            border-radius: 12px;
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: var(--transition);
+            filter: grayscale(20%);
+        }
+        .gallery-grid img:hover { filter: grayscale(0%); transform: scale(1.02); }
+
+        /* --- ENTERPRISE CTA SECTION --- */
+        .cta {
+            background: linear-gradient(135deg, var(--medical-blue) 0%, var(--medical-navy) 100%);
+            color: white;
+            text-align: center;
+            padding: 120px 5%;
+            position: relative;
+            overflow: hidden;
+        }
+        .cta h2 { font-size: 46px; font-weight: 800; margin-bottom: 16px; letter-spacing: -1px; }
+        .cta p { color: #93C5FD; font-size: 18px; margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto; }
+        .cta a {
+            background-color: var(--bg-white);
+            color: var(--medical-navy);
+            padding: 18px 40px;
+            border-radius: 50px;
+            font-weight: 700;
+            display: inline-block;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        .cta a:hover { transform: translateY(-3px); box-shadow: 0 20px 40px rgba(0,0,0,0.2); }
+
+        /* --- FOOTER --- */
+        footer {
+            background-color: #030712;
+            color: #94A3B8;
+            padding: 80px 5% 40px 5%;
+            font-size: 15px;
+            border-top: 1px solid #1E293B;
+        }
+        .footer-wrapper {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 60px;
+            margin-bottom: 60px;
+        }
+        footer h3 { color: white; font-size: 24px; margin-bottom: 16px; font-weight: 700; }
+        .footer-contact-info p { margin-bottom: 12px; display: flex; align-items: center; gap: 10px; }
+
+        @keyframes pulse {
+            0% { opacity: 0.6; }
+            50% { opacity: 1; }
+            100% { opacity: 0.6; }
+        }
+
+        /* --- RESPONSIVE ADAPTATIONS --- */
+        @media (max-width: 1024px) {
+            .hero, .why-us, .technology { grid-template-columns: 1fr; gap: 40px; text-align: center; }
+            .hero h1 { font-size: 42px; }
+            .speciality-grid { grid-template-columns: repeat(2, 1fr); }
+            .doctor-grid { grid-template-columns: repeat(2, 1fr); }
+            .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+            .search-simulator { margin: 0 auto 40px auto; }
+            .hero-buttons { justify-content: center; }
+            .footer-wrapper { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 640px) {
+            .nav-links { display: none; } /* Hamburger menu hook can be wired here */
+            .speciality-grid, .doctor-grid, .gallery-grid { grid-template-columns: 1fr; }
+            .topbar { flex-direction: column; gap: 8px; text-align: center; }
+        }
+    </style>
+</head>
 <body>
 
-<!-- TOP BAR -->
-
 <div class="topbar">
-
-    <div>📞 Emergency: +91 98765 43210</div>
-
-    <div>✉ care@lifecarehospital.com</div>
-
-    <div>🕒 24x7 Emergency Services</div>
-
+    <div class="topbar-left">
+        <div class="topbar-item"><span class="emergency-highlight">🚨 Emergency Link:</span> <a href="tel:+919876543210"><strong>+91 98765 43210</strong></a></div>
+        <div class="topbar-item">✉️ care@lifecarehospital.com</div>
+    </div>
+    <div>🕒 24x7 Multi-Speciality Operational Infrastructure</div>
 </div>
 
-<!-- NAVBAR -->
-
 <nav class="navbar">
-
     <div class="logo">
-
+        <div class="logo-dot"></div>
         LifeCare Hospital
-
     </div>
-
     <ul class="nav-links">
-
         <li><a href="#">Home</a></li>
-
         <li><a href="#specialities">Specialities</a></li>
-
         <li><a href="#doctors">Doctors</a></li>
-
         <li><a href="#contact">Contact</a></li>
-
     </ul>
-
-    <a href="appointments.html" class="appointment-btn">
-        Book Appointment
-    </a>
-
+    <a href="appointments.html" class="appointment-btn">Book Appointment</a>
 </nav>
 
-<!-- HERO -->
-
 <section class="hero">
-
     <div class="hero-left">
-
-        <span class="hero-badge">
-            Trusted Healthcare Since 2005
-        </span>
-
-        <h1>
-
-            Advanced Healthcare
-
-            <span>For Every Family</span>
-
-        </h1>
-
-        <p>
-
-            LifeCare Hospital provides world-class
-            treatment through expert doctors,
-            modern infrastructure and patient-first care.
-
-        </p>
+        <span class="hero-badge">Healthcare Excellence Network</span>
+        <h1>Advanced Medicine. <span>For Your Entire Family.</span></h1>
+        <p>LifeCare Hospital delivers clinical mastery and enterprise healthcare infrastructure through world-class diagnostic tools, globally recognized specialists, and patient-first protocols.</p>
+        
+        <div class="search-simulator">
+            <div class="search-input-wrapper">
+                <span>🔍</span>
+                <input type="text" placeholder="Search specialities or doctors..." readonly>
+            </div>
+            <button class="search-submit-btn" onclick="window.location.href='#specialities'">Find Solution</button>
+        </div>
 
         <div class="hero-buttons">
-
-            <a href="appointments.html" class="btn-primary">
-
-                Book Appointment
-
-            </a>
-
+            <a href="appointments.html" class="btn-primary">Book Consultation</a>
             <a href="tel:+919876543210" class="btn-secondary">
-
-                Emergency Call
-
+                <span>📞</span> Emergency Dispatch
             </a>
-
         </div>
-
     </div>
-
     <div class="hero-right">
-
-        <img src="images/hero.png" alt="Doctor">
-
+        <div class="hero-img-backdrop"></div>
+        <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=600&q=80" alt="Executive Specialist Staff">
     </div>
-
 </section>
-
-<!-- SPECIALITIES -->
 
 <section id="specialities" class="specialities">
-
-    <h2>Our Specialities</h2>
-
-    <div class="speciality-grid">
-
-        <div class="speciality-card">
-            ❤️
-            <h3>Cardiology</h3>
-            <p>Advanced heart care and surgery.</p>
-        </div>
-
-        <div class="speciality-card">
-            🧠
-            <h3>Neurology</h3>
-            <p>Brain and nervous system treatment.</p>
-        </div>
-
-        <div class="speciality-card">
-            🦴
-            <h3>Orthopaedics</h3>
-            <p>Joint replacement and trauma care.</p>
-        </div>
-
-        <div class="speciality-card">
-            👶
-            <h3>Pediatrics</h3>
-            <p>Specialized child healthcare.</p>
-        </div>
-
+    <div class="section-header">
+        <span>Clinical Departments</span>
+        <h2>Our Core Specialities</h2>
     </div>
-
+    <div class="speciality-grid">
+        <div class="speciality-card">
+            <span class="speciality-icon">🫀</span>
+            <h3>Cardiology</h3>
+            <p>Advanced non-invasive cardiac interventions, complex surgeries, and emergency critical heart pathways.</p>
+        </div>
+        <div class="speciality-card">
+            <span class="speciality-icon">🧠</span>
+            <h3>Neurology</h3>
+            <p>Comprehensive brain tracking, neurological assessment microsurgery, and nervous system therapy.</p>
+        </div>
+        <div class="speciality-card">
+            <span class="speciality-icon">🦴</span>
+            <h3>Orthopaedics</h3>
+            <p>Precision joint replacement operations, complex bone reconstruction, and premium trauma physical care.</p>
+        </div>
+        <div class="speciality-card">
+            <span class="speciality-icon">👶</span>
+            <h3>Pediatrics</h3>
+            <p>Highly specialized emergency newborn care units and dedicated long-term physical adolescent growth monitoring.</p>
+        </div>
+    </div>
 </section>
-
-<!-- DOCTORS -->
 
 <section id="doctors" class="doctors">
-
-    <h2>Meet Our Specialists</h2>
-
-    <div class="doctor-grid">
-
-        <div class="doctor-card">
-
-            <img src="images/faculty1.png">
-
-            <h3>Dr. Rajesh Sharma</h3>
-
-            <p>Senior Cardiologist</p>
-
-        </div>
-
-        <div class="doctor-card">
-
-            <img src="images/faculty2.png">
-
-            <h3>Dr. Priya Mehta</h3>
-
-            <p>Neurologist</p>
-
-        </div>
-
-        <div class="doctor-card">
-
-            <img src="images/faculty3.png">
-
-            <h3>Dr. Aman Gupta</h3>
-
-            <p>Orthopaedic Surgeon</p>
-
-        </div>
-
+    <div class="section-header">
+        <span>Medical Director Council</span>
+        <h2>Meet Our Leading Specialists</h2>
     </div>
-
+    <div class="doctor-grid">
+        <div class="doctor-card">
+            <div class="doctor-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&w=500&q=80" alt="Dr. Rajesh Sharma">
+            </div>
+            <div class="doctor-info">
+                <h3>Dr. Rajesh Sharma</h3>
+                <p>Chief Chief Interventional Cardiologist</p>
+            </div>
+        </div>
+        <div class="doctor-card">
+            <div class="doctor-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1594824813573-246434de83fb?auto=format&fit=crop&w=500&q=80" alt="Dr. Priya Mehta">
+            </div>
+            <div class="doctor-info">
+                <h3>Dr. Priya Mehta</h3>
+                <p>Senior Professor of Neuro-Oncology</p>
+            </div>
+        </div>
+        <div class="doctor-card">
+            <div class="doctor-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=500&q=80" alt="Dr. Aman Gupta">
+            </div>
+            <div class="doctor-info">
+                <h3>Dr. Aman Gupta</h3>
+                <p>Senior Consultant Orthopaedic Surgeon</p>
+            </div>
+        </div>
+    </div>
 </section>
-
-<!-- WHY US -->
 
 <section class="why-us">
-
     <div class="why-left">
-
-        <h2>Why Choose LifeCare?</h2>
-
-        <ul>
-
-            <li>✔ 100+ Specialist Doctors</li>
-            <li>✔ 24x7 Emergency Services</li>
-            <li>✔ NABH Standard Infrastructure</li>
-            <li>✔ Advanced ICU & Operation Theatres</li>
-            <li>✔ Patient-Centric Healthcare</li>
-
+        <h2>Institutional Medical Frameworks</h2>
+        <ul class="why-list">
+            <li>
+                <span class="why-icon-check">✓</span>
+                <div>
+                    <strong>Elite Clinical Faculty</strong>
+                    Over 100+ board-certified medical officers and research practitioners.
+                </div>
+            </li>
+            <li>
+                <span class="why-icon-check">✓</span>
+                <div>
+                    <strong>24x7 Critical Core Dispatch</strong>
+                    Instant-response emergency trauma architecture always ready for critical arrivals.
+                </div>
+            </li>
+            <li>
+                <span class="why-icon-check">✓</span>
+                <div>
+                    <strong>National Accreditations (NABH Compliance)</strong>
+                    Strict governance and safety architectures ensuring enterprise patient care.
+                </div>
+            </li>
+            <li>
+                <span class="why-icon-check">✓</span>
+                <div>
+                    <strong>Advanced ICU Isolation Units</strong>
+                    State-of-the-art diagnostic telemetry systems and dedicated life support technology.
+                </div>
+            </li>
         </ul>
-
     </div>
-
     <div class="why-right">
-
-        <img src="images/facility.png">
-
+        <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=600&q=80" alt="NABH Approved Healthcare Unit">
     </div>
-
 </section>
-
-<!-- TECHNOLOGY -->
 
 <section class="technology">
-
     <div class="tech-image">
-
-        <img src="images/gallery1.png">
-
+        <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=600&q=80" alt="Advanced Imaging Center">
     </div>
-
     <div class="tech-content">
-
-        <h2>
-
-            Advanced Medical Technology
-
-        </h2>
-
-        <p>
-
-            State-of-the-art MRI, CT Scan,
-            ICU, Cath Lab and Digital Diagnostics
-            ensuring world-class treatment.
-
-        </p>
-
+        <h2>Advanced Medical Telemetry & Imaging</h2>
+        <p>Our facility champions elite diagnostics using digital modern 3T MRI arrays, ultra-fast multi-slice CT scanning platforms, advanced modular digital cath labs, and continuous centralized cloud-monitored ICU dashboards.</p>
     </div>
-
 </section>
-
-<!-- GALLERY -->
 
 <section class="gallery">
-
-    <h2>Hospital Infrastructure</h2>
-
-    <div class="gallery-grid">
-
-        <img src="images/gallery1.png">
-
-        <img src="images/gallery2.png">
-
-        <img src="images/gallery3.png">
-
-        <img src="images/gallery4.png">
-
+    <div class="section-header">
+        <span>Infrastructure Showcase</span>
+        <h2>World-Class Treatment Facilities</h2>
     </div>
-
+    <div class="gallery-grid">
+        <img src="https://images.unsplash.com/photo-1586773860418-d3b3de97e663?auto=format&fit=crop&w=400&q=80" alt="Surgical Center">
+        <img src="https://images.unsplash.com/photo-1512678080530-7760d81faba6?auto=format&fit=crop&w=400&q=80" alt="Patient Lounge Area">
+        <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=400&q=80" alt="Diagnostics Desk">
+        <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=400&q=80" alt="Clinical Testing Lab">
+    </div>
 </section>
-
-<!-- CTA -->
 
 <section class="cta">
-
-    <h2>
-
-        Your Health Deserves The Best Care
-
-    </h2>
-
-    <p>
-
-        Schedule your consultation with our
-        expert doctors today.
-
-    </p>
-
-    <a href="appointments.html">
-
-        Book Appointment
-
-    </a>
-
+    <h2>Your Health Deserves Elite Management</h2>
+    <p>Connect immediately with our primary intake coordinators to confirm priority booking access with institutional clinical specialists.</p>
+    <a href="appointments.html">Initiate Digital Appointment</a>
 </section>
 
-<!-- FOOTER -->
-
 <footer id="contact">
-
-    <h3>LifeCare Hospital</h3>
-
-    <p>
-
-        Premium Multi-Speciality Healthcare Institution
-
-    </p>
-
-    <p>
-
-        📞 +91 98765 43210
-
-    </p>
-
-    <p>
-
-        ✉ care@lifecarehospital.com
-
-    </p>
-
+    <div class="footer-wrapper">
+        <div>
+            <h3>LifeCare Hospital</h3>
+            <p>Premium Multi-Speciality Healthcare Institution. Dedicated to serving excellence across Greater Noida, Noida, and the Delhi NCR region.</p>
+        </div>
+        <div class="footer-contact-info">
+            <p>📞 <strong>+91 98765 43210</strong></p>
+            <p>✉️ <strong>care@lifecarehospital.com</strong></p>
+        </div>
+    </div>
+    <p style="text-align: center; font-size: 13px; color: #4B5563; padding-top: 20px; border-top: 1px solid #1F2937;">&copy; 2026 LifeCare Hospital System. All rights reserved.</p>
 </footer>
 
 </body>
+</html>
