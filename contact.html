@@ -45,13 +45,35 @@
                     <a href="https://wa.me/918076455953" target="_blank" class="btn btn-primary">Chat on WhatsApp</a>
                 </div>
 
-                <form action="https://api.web3forms.com/submit" method="POST">
-  <input type="hidden" name="access_key" value="172c3dbb-b594-4053-9f1d-7ac1c7ad9638">
-  <input type="text" name="name" required>
-  <input type="email" name="email" required>
-  <textarea name="message" required></textarea>
-  <button type="submit">Submit</button>
-</form>
+              <div class="contact-form">
+                    <form action="https://api.web3forms.com/submit" method="POST">
+                        
+                        <input type="hidden" name="access_key" value="172c3dbb-b594-4053-9f1d-7ac1c7ad9638">
+                        
+                        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" name="name" id="name" placeholder="John Doe" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="business">Business Name (Optional)</label>
+                            <input type="text" name="business" id="business" placeholder="E.g., LifeCare Clinic">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" name="phone" id="phone" placeholder="+91 00000 00000" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">How can we help you?</label>
+                            <textarea name="message" id="message" rows="4" placeholder="Tell us about the website you need..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
                 </div>
 
             </div>
