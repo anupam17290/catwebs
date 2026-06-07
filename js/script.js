@@ -1,70 +1,123 @@
-/**
- * CATWEBS ENTERPRISE SCRIPT
- * Lightweight, zero-dependency logic for agency UI.
- */
+/* =====================================
+   CATWEBS SCRIPT
+===================================== */
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
 
-    // 1. Mobile Menu Toggle Logic
-    const menuTrigger = document.querySelector('.mobile-menu-trigger');
-    const navLinks = document.querySelector('.nav-links');
+    /* ==============================
+       FADE-UP ANIMATION
+    ============================== */
 
-    if (menuTrigger && navLinks) {
-        menuTrigger.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            
-            // Optional: Animate hamburger lines into an X
-            const lines = menuTrigger.querySelectorAll('.hamburger-line');
-            if (navLinks.classList.contains('active')) {
-                lines[0].style.transform = 'translateY(4px) rotate(45deg)';
-                lines[1].style.transform = 'translateY(-4px) rotate(-45deg)';
-            } else {
-                lines[0].style.transform = 'none';
-                lines[1].style.transform = 'none';
+    const fadeElements =
+        document.querySelectorAll(
+            ".fade-up,.fade-in"
+        );
+
+    const observer =
+        new IntersectionObserver(
+            entries => {
+
+                entries.forEach(entry => {
+
+                    if(entry.isIntersecting){
+
+                        entry.target.classList.add("show");
+                    }
+
+                });
+
+            },
+            {
+                threshold:0.15
             }
-        });
-    }
+        );
 
-    // 2. High-End Scroll Reveal Animations (Intersection Observer)
-    const fadeElements = document.querySelectorAll('.bento-item, .solution-block, .project-block, .standard-item, .process-step');
+    fadeElements.forEach(el => {
 
-    // Add initial state class to elements
-    fadeElements.forEach(el => el.classList.add('fade-up'));
+        observer.observe(el);
 
-    const scrollObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-                // Optional: Stop observing once revealed to prevent re-animation
-                observer.unobserve(entry.target);
-            }
-        });
-    }, {
-        root: null,
-        threshold: 0.1, // Trigger when 10% of the element is visible
-        rootMargin: "0px 0px -50px 0px"
     });
 
-    fadeElements.forEach(el => scrollObserver.observe(el));
+    /* ==============================
+       ACTIVE NAVIGATION
+    ============================== */
 
-    // 3. Optional: Form Submission Simulation for the Contact Page
-    const contactForm = document.querySelector('.enterprise-form');
-    if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
-            // Remove e.preventDefault() when you connect Web3Forms/Formspree.
-            // e.preventDefault(); 
-            const btn = contactForm.querySelector('button[type="submit"]');
-            const originalText = btn.innerText;
-            
-            btn.innerText = "Initializing...";
-            btn.style.opacity = "0.8";
-            
-            // Simulating network request delay
-            setTimeout(() => {
-                btn.innerText = "Request Sent Successfully";
-                btn.style.background = "#2ea043"; // Success green
-                btn.style.color = "#ffffff";
-            }, 1500);
+    const currentPage =
+        window.location.pathname
+        .split("/")
+        .pop();
+
+    document
+        .querySelectorAll(".nav-menu a")
+        .forEach(link => {
+
+            const href =
+                link.getAttribute("href");
+
+            if(href === currentPage){
+
+                link.classList.add("active");
+            }
+
         });
-    }
+
+    /* ==============================
+       SMOOTH SCROLL
+    ============================== */
+
+    document
+        .querySelectorAll('a[href^="#"]')
+        .forEach(anchor => {
+
+            anchor.addEventListener(
+                "click",
+                function(e){
+
+                    const target =
+                        document.querySelector(
+                            this.getAttribute("href")
+                        );
+
+                    if(target){
+
+                        e.preventDefault();
+
+                        target.scrollIntoView({
+
+                            behavior:"smooth"
+
+                        });
+
+                    }
+
+                }
+            );
+
+        });
+
+    /* ==============================
+       NAVBAR SHADOW ON SCROLL
+    ============================== */
+
+    const navbar =
+        document.querySelector(".navbar");
+
+    window.addEventListener(
+        "scroll",
+        () => {
+
+            if(window.scrollY > 40){
+
+                navbar.style.boxShadow =
+                    "0 15px 30px rgba(0,0,0,.08)";
+
+            }else{
+
+                navbar.style.boxShadow =
+                    "0 4px 10px rgba(0,0,0,.05)";
+            }
+
+        }
+    );
+
 });
