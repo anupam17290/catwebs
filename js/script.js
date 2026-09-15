@@ -1,51 +1,124 @@
-/* =====================================
-   CATWEBS SCRIPT
-===================================== */
+/* =========================================================
+   CATWEBS — GLOBAL JAVASCRIPT
+   Step 1: Navigation + Foundation
+   ========================================================= */
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    /* ==============================
-       FADE-UP ANIMATION
-    ============================== */
+    /* =====================================================
+       MOBILE NAVIGATION
+    ===================================================== */
 
-    const fadeElements =
-        document.querySelectorAll(
-            ".fade-up,.fade-in"
-        );
+    const mobileToggle =
+        document.querySelector(".mobile-toggle");
 
-    const observer =
-        new IntersectionObserver(
-            entries => {
+    const navMenu =
+        document.querySelector(".nav-menu");
 
-                entries.forEach(entry => {
+    if (mobileToggle && navMenu) {
 
-                    if(entry.isIntersecting){
+        mobileToggle.addEventListener("click", () => {
 
-                        entry.target.classList.add("show");
-                    }
+            const isOpen =
+                navMenu.classList.toggle("open");
 
-                });
+            mobileToggle.setAttribute(
+                "aria-expanded",
+                String(isOpen)
+            );
 
-            },
-            {
-                threshold:0.15
+            document.body.classList.toggle(
+                "nav-open",
+                isOpen
+            );
+        });
+
+
+        /* Close menu after selecting a link */
+
+        navMenu.querySelectorAll("a").forEach(link => {
+
+            link.addEventListener("click", () => {
+
+                navMenu.classList.remove("open");
+
+                mobileToggle.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
+
+                document.body.classList.remove(
+                    "nav-open"
+                );
+            });
+
+        });
+
+
+        /* Close when Escape is pressed */
+
+        document.addEventListener("keydown", event => {
+
+            if (
+                event.key === "Escape" &&
+                navMenu.classList.contains("open")
+            ) {
+
+                navMenu.classList.remove("open");
+
+                mobileToggle.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
+
+                document.body.classList.remove(
+                    "nav-open"
+                );
+
+                mobileToggle.focus();
             }
+
+        });
+
+    }
+
+
+    /* =====================================================
+       NAVBAR SCROLL STATE
+    ===================================================== */
+
+    const navbar =
+        document.querySelector(".navbar");
+
+    if (navbar) {
+
+        const updateNavbar =
+            () => {
+
+                navbar.classList.toggle(
+                    "scrolled",
+                    window.scrollY > 15
+                );
+
+            };
+
+        updateNavbar();
+
+        window.addEventListener(
+            "scroll",
+            updateNavbar,
+            { passive: true }
         );
+    }
 
-    fadeElements.forEach(el => {
 
-        observer.observe(el);
-
-    });
-
-    /* ==============================
+    /* =====================================================
        ACTIVE NAVIGATION
-    ============================== */
+    ===================================================== */
 
-    const currentPage =
+    const currentPath =
         window.location.pathname
-        .split("/")
-        .pop();
+            .replace(/\/+$/, "");
 
     document
         .querySelectorAll(".nav-menu a")
@@ -54,16 +127,39 @@ document.addEventListener("DOMContentLoaded", () => {
             const href =
                 link.getAttribute("href");
 
-            if(href === currentPage){
+            if (
+                !href ||
+                href.startsWith("#") ||
+                href.startsWith("http")
+            ) {
+                return;
+            }
+
+            const linkPath =
+                new URL(
+                    href,
+                    window.location.href
+                ).pathname
+                    .replace(/\/+$/, "");
+
+            if (
+                linkPath === currentPath ||
+                (
+                    currentPath === "" &&
+                    linkPath.endsWith("/index.html")
+                )
+            ) {
 
                 link.classList.add("active");
+
             }
 
         });
 
-    /* ==============================
-       SMOOTH SCROLL
-    ============================== */
+
+    /* =====================================================
+       SMOOTH INTERNAL LINKS
+    ===================================================== */
 
     document
         .querySelectorAll('a[href^="#"]')
@@ -71,53 +167,110 @@ document.addEventListener("DOMContentLoaded", () => {
 
             anchor.addEventListener(
                 "click",
-                function(e){
+                event => {
+
+                    const selector =
+                        anchor.getAttribute("href");
+
+                    if (
+                        !selector ||
+                        selector === "#"
+                    ) {
+                        return;
+                    }
 
                     const target =
                         document.querySelector(
-                            this.getAttribute("href")
+                            selector
                         );
 
-                    if(target){
-
-                        e.preventDefault();
-
-                        target.scrollIntoView({
-
-                            behavior:"smooth"
-
-                        });
-
+                    if (!target) {
+                        return;
                     }
+
+                    event.preventDefault();
+
+                    target.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start"
+                    });
 
                 }
             );
 
         });
 
-    /* ==============================
-       NAVBAR SHADOW ON SCROLL
-    ============================== */
 
-    const navbar =
-        document.querySelector(".navbar");
+    /* =====================================================
+       SCROLL REVEAL
+    ===================================================== */
 
-    window.addEventListener(
-        "scroll",
-        () => {
+    const revealElements =
+        document.querySelectorAll(
+            ".fade-up, .fade-in"
+        );
 
-            if(window.scrollY > 40){
+    if (
+        revealElements.length &&
+        "IntersectionObserver" in window
+    ) {
 
-                navbar.style.boxShadow =
-                    "0 15px 30px rgba(0,0,0,.08)";
+        const observer =
+            new IntersectionObserver(
+                entries => {
 
-            }else{
+                    entries.forEach(entry => {
 
-                navbar.style.boxShadow =
-                    "0 4px 10px rgba(0,0,0,.05)";
-            }
+                        if (
+                            entry.isIntersecting
+                        ) {
 
-        }
-    );
+                            entry.target.classList.add(
+                                "show"
+                            );
+
+                            observer.unobserve(
+                                entry.target
+                            );
+
+                        }
+
+                    });
+
+                },
+                {
+                    threshold: 0.12
+                }
+            );
+
+        revealElements.forEach(element => {
+
+            observer.observe(element);
+
+        });
+
+    } else {
+
+        revealElements.forEach(element => {
+
+            element.classList.add("show");
+
+        });
+
+    }
+
+
+    /* =====================================================
+       CURRENT YEAR
+    ===================================================== */
+
+    document
+        .querySelectorAll("[data-current-year]")
+        .forEach(element => {
+
+            element.textContent =
+                new Date().getFullYear();
+
+        });
 
 });
