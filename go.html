@@ -1,0 +1,2010 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CatWebs — Local Business Digital Growth | Website, Google &amp; WhatsApp</title>
+    <meta name="description" content="CatWebs helps local businesses in Greater Noida, Noida and NCR build a professional online presence across Google, websites and WhatsApp.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://catwebs.in/go.html">
+
+    <meta property="og:title" content="CatWebs — Local Business Digital Growth">
+    <meta property="og:description" content="Get found. Build trust. Get contacted. Practical digital solutions for local businesses.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://catwebs.in/go.html">
+    <meta property="og:image" content="https://catwebs.in/assets/images/webp/logo.webp">
+
+    <link rel="icon" href="assets/images/webp/icon.webp">
+
+    <style>
+        /* =========================================================
+           CATWEBS /GO — FULLY SELF-CONTAINED STYLES
+           All selectors are namespaced to .cw-go-page.
+        ========================================================= */
+
+        :root {
+            --cw-go-navy: #071b45;
+            --cw-go-navy-2: #0b2a62;
+            --cw-go-blue: #0757c9;
+            --cw-go-cyan: #11b8ef;
+            --cw-go-green: #18a968;
+            --cw-go-text: #10213f;
+            --cw-go-muted: #61708a;
+            --cw-go-line: #dce5f0;
+            --cw-go-soft: #f5f8fc;
+            --cw-go-white: #ffffff;
+            --cw-go-radius: 18px;
+            --cw-go-shadow: 0 16px 45px rgba(7, 27, 69, .08);
+            --cw-go-max: 1120px;
+        }
+
+        .cw-go-page,
+        .cw-go-page * {
+            box-sizing: border-box;
+        }
+
+        .cw-go-page {
+            margin: 0;
+            background: var(--cw-go-white);
+            color: var(--cw-go-text);
+            font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            line-height: 1.55;
+            overflow-x: hidden;
+        }
+
+        .cw-go-page a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .cw-go-page button,
+        .cw-go-page input,
+        .cw-go-page select {
+            font: inherit;
+        }
+
+        .cw-go-page img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .cw-go-page ::selection {
+            background: rgba(17, 184, 239, .24);
+        }
+
+        .cw-go-page .cw-go-shell {
+            width: min(calc(100% - 40px), var(--cw-go-max));
+            margin-inline: auto;
+        }
+
+        .cw-go-page .cw-go-skip {
+            position: fixed;
+            left: 14px;
+            top: 12px;
+            z-index: 9999;
+            transform: translateY(-150%);
+            background: var(--cw-go-navy);
+            color: #fff;
+            padding: 10px 14px;
+            border-radius: 8px;
+            font-weight: 800;
+        }
+
+        .cw-go-page .cw-go-skip:focus {
+            transform: translateY(0);
+        }
+
+        /* HEADER */
+        .cw-go-page .cw-go-header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, .96);
+            border-bottom: 1px solid var(--cw-go-line);
+            backdrop-filter: blur(12px);
+        }
+
+        .cw-go-page .cw-go-header-inner {
+            min-height: 76px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 22px;
+        }
+
+        .cw-go-page .cw-go-logo {
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .cw-go-page .cw-go-logo img {
+            width: 176px;
+            height: auto;
+        }
+
+        .cw-go-page .cw-go-header-actions {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .cw-go-page .cw-go-header-link {
+            min-height: 42px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 14px;
+            border: 1px solid var(--cw-go-line);
+            border-radius: 8px;
+            color: var(--cw-go-navy);
+            font-size: 13px;
+            font-weight: 800;
+        }
+
+        .cw-go-page .cw-go-header-link:hover {
+            border-color: var(--cw-go-blue);
+            color: var(--cw-go-blue);
+        }
+
+        /* BUTTONS */
+        .cw-go-page .cw-go-btn {
+            min-height: 48px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 9px;
+            padding: 12px 19px;
+            border: 1px solid transparent;
+            border-radius: 9px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 850;
+            letter-spacing: -.01em;
+            transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease, border-color 180ms ease;
+        }
+
+        .cw-go-page .cw-go-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .cw-go-page .cw-go-btn:focus-visible,
+        .cw-go-page a:focus-visible,
+        .cw-go-page input:focus-visible,
+        .cw-go-page select:focus-visible {
+            outline: 3px solid rgba(17, 184, 239, .35);
+            outline-offset: 3px;
+        }
+
+        .cw-go-page .cw-go-btn-primary {
+            color: #fff;
+            background: var(--cw-go-blue);
+            box-shadow: 0 10px 24px rgba(7, 87, 201, .22);
+        }
+
+        .cw-go-page .cw-go-btn-primary:hover {
+            background: #064cae;
+            box-shadow: 0 14px 30px rgba(7, 87, 201, .28);
+        }
+
+        .cw-go-page .cw-go-btn-whatsapp {
+            color: #fff;
+            background: var(--cw-go-green);
+            box-shadow: 0 10px 24px rgba(24, 169, 104, .22);
+        }
+
+        .cw-go-page .cw-go-btn-whatsapp:hover {
+            background: #118e57;
+        }
+
+        .cw-go-page .cw-go-btn-outline {
+            color: var(--cw-go-navy);
+            background: #fff;
+            border-color: #b9c8dc;
+        }
+
+        .cw-go-page .cw-go-btn-outline:hover {
+            border-color: var(--cw-go-blue);
+            color: var(--cw-go-blue);
+        }
+
+        .cw-go-page .cw-go-btn-dark {
+            color: #fff;
+            background: var(--cw-go-navy);
+        }
+
+        /* HERO */
+        .cw-go-page .cw-go-hero {
+            position: relative;
+            padding: 58px 0 68px;
+            background:
+                radial-gradient(circle at 88% 20%, rgba(17, 184, 239, .08), transparent 26%),
+                linear-gradient(180deg, #fff 0%, #f8fbff 100%);
+            border-bottom: 1px solid var(--cw-go-line);
+        }
+
+        .cw-go-page .cw-go-hero-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 1.12fr) minmax(300px, .88fr);
+            align-items: center;
+            gap: 70px;
+        }
+
+        .cw-go-page .cw-go-campaign-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            margin-bottom: 18px;
+            color: var(--cw-go-blue);
+            font-size: 11px;
+            font-weight: 900;
+            letter-spacing: .16em;
+            text-transform: uppercase;
+        }
+
+        .cw-go-page .cw-go-campaign-label::before {
+            content: "";
+            width: 24px;
+            height: 3px;
+            background: var(--cw-go-cyan);
+        }
+
+        .cw-go-page .cw-go-hero h1 {
+            max-width: 780px;
+            margin: 0;
+            color: var(--cw-go-navy);
+            font-size: clamp(42px, 5vw, 72px);
+            line-height: .99;
+            letter-spacing: -.055em;
+            font-weight: 900;
+        }
+
+        .cw-go-page .cw-go-hero h1 span {
+            color: var(--cw-go-cyan);
+        }
+
+        .cw-go-page .cw-go-hero-lead {
+            max-width: 680px;
+            margin: 24px 0 0;
+            color: #52627c;
+            font-size: 18px;
+            line-height: 1.65;
+        }
+
+        .cw-go-page .cw-go-hero-solution {
+            max-width: 700px;
+            margin: 22px 0 0;
+            padding-left: 16px;
+            border-left: 3px solid var(--cw-go-cyan);
+            color: var(--cw-go-navy);
+            font-size: 18px;
+            font-weight: 800;
+        }
+
+        .cw-go-page .cw-go-hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 27px;
+        }
+
+        .cw-go-page .cw-go-hero-note {
+            margin-top: 17px;
+            color: #74829a;
+            font-size: 12px;
+        }
+
+        .cw-go-page .cw-go-hero-side {
+            padding: 26px;
+            background: #fff;
+            border: 1px solid var(--cw-go-line);
+            border-radius: 20px;
+            box-shadow: var(--cw-go-shadow);
+        }
+
+        .cw-go-page .cw-go-check-panel {
+            padding: 25px;
+            border: 1px solid #cfdbea;
+            background:
+                linear-gradient(135deg, rgba(7, 27, 69, .035), rgba(17, 184, 239, .045));
+            border-radius: 14px;
+        }
+
+        .cw-go-page .cw-go-check-label {
+            color: var(--cw-go-blue);
+            font-size: 10px;
+            font-weight: 900;
+            letter-spacing: .16em;
+            text-transform: uppercase;
+        }
+
+        .cw-go-page .cw-go-check-panel h2 {
+            margin: 12px 0 8px;
+            color: var(--cw-go-navy);
+            font-size: 28px;
+            line-height: 1.08;
+            letter-spacing: -.035em;
+        }
+
+        .cw-go-page .cw-go-check-panel p {
+            margin: 0;
+            color: var(--cw-go-muted);
+            font-size: 14px;
+        }
+
+        .cw-go-page .cw-go-mini-flow {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            margin-top: 24px;
+            border-top: 1px solid var(--cw-go-line);
+            border-bottom: 1px solid var(--cw-go-line);
+        }
+
+        .cw-go-page .cw-go-mini-flow-item {
+            padding: 16px 10px;
+            text-align: center;
+            border-right: 1px solid var(--cw-go-line);
+        }
+
+        .cw-go-page .cw-go-mini-flow-item:last-child {
+            border-right: 0;
+        }
+
+        .cw-go-page .cw-go-mini-flow-item strong {
+            display: block;
+            color: var(--cw-go-navy);
+            font-size: 12px;
+        }
+
+        .cw-go-page .cw-go-mini-flow-item span {
+            display: block;
+            margin-top: 3px;
+            color: var(--cw-go-muted);
+            font-size: 10px;
+        }
+
+        /* SECTION SYSTEM */
+        .cw-go-page .cw-go-section {
+            padding: 92px 0;
+            scroll-margin-top: 82px;
+        }
+
+        .cw-go-page .cw-go-section-soft {
+            background: var(--cw-go-soft);
+        }
+
+        .cw-go-page .cw-go-section-heading {
+            max-width: 760px;
+            margin-bottom: 40px;
+        }
+
+        .cw-go-page .cw-go-section-heading.cw-go-centered {
+            margin-inline: auto;
+            text-align: center;
+        }
+
+        .cw-go-page .cw-go-kicker {
+            color: var(--cw-go-blue);
+            font-size: 10px;
+            font-weight: 900;
+            letter-spacing: .17em;
+            text-transform: uppercase;
+        }
+
+        .cw-go-page .cw-go-section-heading h2 {
+            margin: 10px 0 12px;
+            color: var(--cw-go-navy);
+            font-size: clamp(30px, 4vw, 48px);
+            line-height: 1.06;
+            letter-spacing: -.045em;
+            font-weight: 900;
+        }
+
+        .cw-go-page .cw-go-section-heading p {
+            margin: 0;
+            color: var(--cw-go-muted);
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        /* OUTCOMES */
+        .cw-go-page .cw-go-outcomes {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            border-top: 1px solid var(--cw-go-line);
+            border-bottom: 1px solid var(--cw-go-line);
+        }
+
+        .cw-go-page .cw-go-outcome {
+            min-height: 220px;
+            padding: 32px;
+            border-right: 1px solid var(--cw-go-line);
+        }
+
+        .cw-go-page .cw-go-outcome:last-child {
+            border-right: 0;
+        }
+
+        .cw-go-page .cw-go-outcome-number {
+            width: 42px;
+            height: 42px;
+            display: grid;
+            place-items: center;
+            margin-bottom: 26px;
+            color: var(--cw-go-blue);
+            background: #eef6ff;
+            border: 1px solid #d6e7fb;
+            border-radius: 50%;
+            font-size: 12px;
+            font-weight: 900;
+        }
+
+        .cw-go-page .cw-go-outcome h3 {
+            margin: 0;
+            color: var(--cw-go-navy);
+            font-size: 23px;
+            letter-spacing: -.025em;
+        }
+
+        .cw-go-page .cw-go-outcome p {
+            margin: 7px 0 0;
+            color: var(--cw-go-muted);
+            font-size: 14px;
+        }
+
+        /* PROBLEM / SOLUTION */
+        .cw-go-page .cw-go-problem-grid {
+            display: grid;
+            grid-template-columns: .78fr 1.22fr;
+            gap: 68px;
+            align-items: start;
+        }
+
+        .cw-go-page .cw-go-problem-label {
+            margin-bottom: 12px;
+            color: var(--cw-go-blue);
+            font-size: 10px;
+            font-weight: 900;
+            letter-spacing: .15em;
+            text-transform: uppercase;
+        }
+
+        .cw-go-page .cw-go-problem h2 {
+            margin: 0;
+            color: var(--cw-go-navy);
+            font-size: clamp(30px, 4vw, 52px);
+            line-height: 1.02;
+            letter-spacing: -.05em;
+        }
+
+        .cw-go-page .cw-go-solution {
+            display: grid;
+            gap: 22px;
+        }
+
+        .cw-go-page .cw-go-solution-box {
+            padding: 24px 26px;
+            border-left: 3px solid var(--cw-go-cyan);
+            background: #f8fbff;
+        }
+
+        .cw-go-page .cw-go-solution-box strong {
+            display: block;
+            margin-bottom: 6px;
+            color: var(--cw-go-navy);
+            font-size: 11px;
+            letter-spacing: .13em;
+            text-transform: uppercase;
+        }
+
+        .cw-go-page .cw-go-solution-box p {
+            margin: 0;
+            color: #50617b;
+            font-size: 15px;
+            line-height: 1.65;
+        }
+
+        .cw-go-page .cw-go-checklist {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 10px 18px;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .cw-go-page .cw-go-checklist li {
+            position: relative;
+            padding-left: 22px;
+            color: #263b5c;
+            font-size: 14px;
+        }
+
+        .cw-go-page .cw-go-checklist li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--cw-go-cyan);
+            font-weight: 900;
+        }
+
+        .cw-go-page .cw-go-section-cta {
+            margin-top: 24px;
+        }
+
+        .cw-go-page .cw-go-emphasis {
+            position: relative;
+        }
+
+        .cw-go-page .cw-go-emphasis::before {
+            content: "YOUR CHECK";
+            position: absolute;
+            top: -15px;
+            right: 0;
+            padding: 5px 8px;
+            color: var(--cw-go-blue);
+            background: #eef6ff;
+            border: 1px solid #d6e7fb;
+            border-radius: 5px;
+            font-size: 8px;
+            font-weight: 900;
+            letter-spacing: .14em;
+        }
+
+        /* PACKAGES */
+        .cw-go-page .cw-go-packages {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 18px;
+        }
+
+        .cw-go-page .cw-go-package {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            min-height: 500px;
+            padding: 32px;
+            background: #fff;
+            border: 1px solid var(--cw-go-line);
+            border-radius: var(--cw-go-radius);
+            box-shadow: 0 10px 30px rgba(7, 27, 69, .045);
+        }
+
+        .cw-go-page .cw-go-package-featured {
+            border-color: #b9d9f4;
+            box-shadow: 0 18px 48px rgba(7, 87, 201, .10);
+        }
+
+        .cw-go-page .cw-go-package-badge {
+            position: absolute;
+            top: 22px;
+            right: 22px;
+            padding: 6px 9px;
+            color: var(--cw-go-blue);
+            background: #edf6ff;
+            border: 1px solid #d3e6fa;
+            border-radius: 5px;
+            font-size: 9px;
+            font-weight: 900;
+            letter-spacing: .08em;
+            text-transform: uppercase;
+        }
+
+        .cw-go-page .cw-go-package-label {
+            color: var(--cw-go-blue);
+            font-size: 10px;
+            font-weight: 900;
+            letter-spacing: .15em;
+            text-transform: uppercase;
+        }
+
+        .cw-go-page .cw-go-package h3 {
+            margin: 12px 0 4px;
+            color: var(--cw-go-navy);
+            font-size: 28px;
+            letter-spacing: -.035em;
+        }
+
+        .cw-go-page .cw-go-package-price {
+            color: var(--cw-go-navy);
+            font-size: 43px;
+            line-height: 1;
+            letter-spacing: -.055em;
+            font-weight: 900;
+        }
+
+        .cw-go-page .cw-go-package-title {
+            margin: 11px 0 0;
+            color: var(--cw-go-blue);
+            font-size: 14px;
+            font-weight: 850;
+        }
+
+        .cw-go-page .cw-go-package-list {
+            display: grid;
+            gap: 11px;
+            margin: 27px 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .cw-go-page .cw-go-package-list li {
+            position: relative;
+            padding-left: 22px;
+            color: #4f6078;
+            font-size: 14px;
+        }
+
+        .cw-go-page .cw-go-package-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--cw-go-cyan);
+            font-weight: 900;
+        }
+
+        .cw-go-page .cw-go-package .cw-go-btn {
+            margin-top: auto;
+            align-self: flex-start;
+        }
+
+        /* WHY */
+        .cw-go-page .cw-go-why-grid {
+            display: grid;
+            grid-template-columns: .9fr 1.1fr;
+            gap: 70px;
+            align-items: start;
+        }
+
+        .cw-go-page .cw-go-why-list {
+            display: grid;
+            gap: 0;
+            border-top: 1px solid var(--cw-go-line);
+        }
+
+        .cw-go-page .cw-go-why-item {
+            display: grid;
+            grid-template-columns: 48px 1fr;
+            gap: 16px;
+            padding: 22px 0;
+            border-bottom: 1px solid var(--cw-go-line);
+        }
+
+        .cw-go-page .cw-go-why-item > span {
+            color: var(--cw-go-blue);
+            font-size: 11px;
+            font-weight: 900;
+        }
+
+        .cw-go-page .cw-go-why-item h3 {
+            margin: 0;
+            color: var(--cw-go-navy);
+            font-size: 18px;
+        }
+
+        .cw-go-page .cw-go-why-item p {
+            margin: 4px 0 0;
+            color: var(--cw-go-muted);
+            font-size: 14px;
+        }
+
+        /* CHECK / FORM */
+        .cw-go-page .cw-go-check-wrap {
+            display: grid;
+            grid-template-columns: .9fr 1.1fr;
+            gap: 30px;
+            align-items: start;
+        }
+
+        .cw-go-page .cw-go-contact-panel {
+            padding: 32px;
+            color: #fff;
+            background: var(--cw-go-navy);
+            border-radius: var(--cw-go-radius);
+            box-shadow: 0 20px 50px rgba(7, 27, 69, .18);
+        }
+
+        .cw-go-page .cw-go-contact-panel .cw-go-kicker {
+            color: var(--cw-go-cyan);
+        }
+
+        .cw-go-page .cw-go-contact-panel h2 {
+            margin: 9px 0 12px;
+            color: #fff;
+            font-size: 37px;
+            line-height: 1.05;
+            letter-spacing: -.045em;
+        }
+
+        .cw-go-page .cw-go-contact-panel p {
+            margin: 0;
+            color: rgba(255, 255, 255, .72);
+            font-size: 14px;
+        }
+
+        .cw-go-page .cw-go-direct {
+            display: grid;
+            gap: 10px;
+            margin-top: 26px;
+        }
+
+        .cw-go-page .cw-go-direct a {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            min-height: 48px;
+            padding: 10px 13px;
+            border: 1px solid rgba(255,255,255,.14);
+            border-radius: 9px;
+            color: #fff;
+            font-size: 13px;
+            font-weight: 800;
+        }
+
+        .cw-go-page .cw-go-direct a:hover {
+            border-color: rgba(17,184,239,.65);
+            background: rgba(255,255,255,.04);
+        }
+
+        .cw-go-page .cw-go-form-panel {
+            padding: 32px;
+            background: #fff;
+            border: 1px solid var(--cw-go-line);
+            border-radius: var(--cw-go-radius);
+            box-shadow: var(--cw-go-shadow);
+        }
+
+        .cw-go-page .cw-go-form-panel h3 {
+            margin: 0 0 5px;
+            color: var(--cw-go-navy);
+            font-size: 26px;
+            letter-spacing: -.035em;
+        }
+
+        .cw-go-page .cw-go-form-note {
+            margin: 0 0 23px;
+            color: var(--cw-go-muted);
+            font-size: 13px;
+        }
+
+        .cw-go-page .cw-go-form {
+            display: grid;
+            gap: 15px;
+        }
+
+        .cw-go-page .cw-go-field {
+            display: grid;
+            gap: 6px;
+        }
+
+        .cw-go-page .cw-go-field label {
+            color: var(--cw-go-navy);
+            font-size: 12px;
+            font-weight: 850;
+        }
+
+        .cw-go-page .cw-go-field input,
+        .cw-go-page .cw-go-field select {
+            width: 100%;
+            min-height: 48px;
+            padding: 11px 13px;
+            color: var(--cw-go-text);
+            background: #fff;
+            border: 1px solid #cbd7e6;
+            border-radius: 8px;
+        }
+
+        .cw-go-page .cw-go-field input::placeholder {
+            color: #98a5b7;
+        }
+
+        .cw-go-page .cw-go-form-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 15px;
+        }
+
+        .cw-go-page .cw-go-form-submit {
+            margin-top: 5px;
+            width: 100%;
+        }
+
+        .cw-go-page .cw-go-form-status {
+            min-height: 20px;
+            margin: 0;
+            color: var(--cw-go-muted);
+            font-size: 12px;
+        }
+
+        /* CONTACT STRIP */
+        .cw-go-page .cw-go-contact-strip {
+            display: grid;
+            grid-template-columns: 1.2fr repeat(3, 1fr);
+            border-top: 1px solid var(--cw-go-line);
+            border-bottom: 1px solid var(--cw-go-line);
+        }
+
+        .cw-go-page .cw-go-contact-strip > div {
+            min-height: 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 18px 22px;
+            border-right: 1px solid var(--cw-go-line);
+        }
+
+        .cw-go-page .cw-go-contact-strip > div:last-child {
+            border-right: 0;
+        }
+
+        .cw-go-page .cw-go-contact-strip strong {
+            color: var(--cw-go-navy);
+            font-size: 13px;
+        }
+
+        .cw-go-page .cw-go-contact-strip span {
+            margin-top: 3px;
+            color: var(--cw-go-muted);
+            font-size: 12px;
+        }
+
+        /* FOOTER */
+        .cw-go-page .cw-go-footer {
+            padding: 38px 0 95px;
+            color: rgba(255,255,255,.7);
+            background: #041329;
+        }
+
+        .cw-go-page .cw-go-footer-main {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 40px;
+        }
+
+        .cw-go-page .cw-go-footer-brand img {
+            width: 150px;
+            filter: brightness(0) invert(1);
+            opacity: .92;
+        }
+
+        .cw-go-page .cw-go-footer-brand p {
+            max-width: 300px;
+            margin: 12px 0 0;
+            font-size: 13px;
+        }
+
+        .cw-go-page .cw-go-footer-contact {
+            display: grid;
+            gap: 5px;
+            text-align: right;
+        }
+
+        .cw-go-page .cw-go-footer-contact a {
+            color: #fff;
+            font-size: 13px;
+            font-weight: 750;
+        }
+
+        .cw-go-page .cw-go-footer-contact span {
+            font-size: 12px;
+        }
+
+        .cw-go-page .cw-go-footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            margin-top: 30px;
+            padding-top: 18px;
+            border-top: 1px solid rgba(255,255,255,.1);
+            font-size: 10px;
+        }
+
+        /* WHATSAPP FLOAT */
+        .cw-go-page .cw-go-float-wa {
+            position: fixed;
+            right: 20px;
+            bottom: 22px;
+            z-index: 1200;
+            width: 58px;
+            height: 58px;
+            display: grid;
+            place-items: center;
+            color: #fff;
+            background: var(--cw-go-green);
+            border-radius: 50%;
+            box-shadow: 0 12px 28px rgba(24,169,104,.28);
+            transition: transform 180ms ease;
+        }
+
+        .cw-go-page .cw-go-float-wa:hover {
+            transform: translateY(-3px);
+        }
+
+        .cw-go-page .cw-go-float-wa svg {
+            width: 29px;
+            height: 29px;
+            fill: currentColor;
+        }
+
+        /* MOBILE STICKY BAR */
+        .cw-go-page .cw-go-mobile-bar {
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 1100;
+            display: none;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            padding: 8px;
+            background: rgba(255,255,255,.96);
+            border-top: 1px solid var(--cw-go-line);
+            box-shadow: 0 -10px 30px rgba(7,27,69,.10);
+            backdrop-filter: blur(10px);
+        }
+
+        .cw-go-page .cw-go-mobile-bar a {
+            min-height: 48px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 7px;
+            border-radius: 8px;
+            color: #fff;
+            font-size: 13px;
+            font-weight: 900;
+        }
+
+        .cw-go-page .cw-go-mobile-bar .cw-go-mobile-wa {
+            background: var(--cw-go-green);
+        }
+
+        .cw-go-page .cw-go-mobile-bar .cw-go-mobile-call {
+            background: var(--cw-go-navy);
+        }
+
+        /* REVEAL */
+        .cw-go-page .cw-go-reveal {
+            opacity: 0;
+            transform: translateY(14px);
+            transition: opacity 520ms ease, transform 520ms ease;
+        }
+
+        .cw-go-page .cw-go-reveal.cw-go-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ACTIVE CAMPAIGN */
+        .cw-go-page .cw-go-topic-active {
+            outline: 2px solid rgba(17,184,239,.38);
+            outline-offset: -2px;
+            background: linear-gradient(180deg, #fff, #f4fbff);
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 900px) {
+            .cw-go-page .cw-go-hero-grid,
+            .cw-go-page .cw-go-problem-grid,
+            .cw-go-page .cw-go-why-grid,
+            .cw-go-page .cw-go-check-wrap {
+                grid-template-columns: 1fr;
+            }
+
+            .cw-go-page .cw-go-hero-grid {
+                gap: 34px;
+            }
+
+            .cw-go-page .cw-go-hero-side {
+                max-width: 680px;
+            }
+
+            .cw-go-page .cw-go-outcomes {
+                grid-template-columns: 1fr;
+            }
+
+            .cw-go-page .cw-go-outcome {
+                min-height: 0;
+                border-right: 0;
+                border-bottom: 1px solid var(--cw-go-line);
+            }
+
+            .cw-go-page .cw-go-outcome:last-child {
+                border-bottom: 0;
+            }
+
+            .cw-go-page .cw-go-contact-strip {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .cw-go-page .cw-go-contact-strip > div:nth-child(2) {
+                border-right: 0;
+            }
+
+            .cw-go-page .cw-go-contact-strip > div:nth-child(-n+2) {
+                border-bottom: 1px solid var(--cw-go-line);
+            }
+        }
+
+        @media (max-width: 700px) {
+            .cw-go-page .cw-go-shell {
+                width: min(calc(100% - 28px), var(--cw-go-max));
+            }
+
+            .cw-go-page .cw-go-header-inner {
+                min-height: 68px;
+            }
+
+            .cw-go-page .cw-go-logo img {
+                width: 142px;
+            }
+
+            .cw-go-page .cw-go-header-link {
+                display: none;
+            }
+
+            .cw-go-page .cw-go-header-actions .cw-go-btn {
+                min-height: 40px;
+                padding: 8px 11px;
+                font-size: 11px;
+            }
+
+            .cw-go-page .cw-go-hero {
+                padding: 38px 0 44px;
+            }
+
+            .cw-go-page .cw-go-hero-grid {
+                gap: 25px;
+            }
+
+            .cw-go-page .cw-go-hero h1 {
+                font-size: clamp(39px, 12vw, 58px);
+            }
+
+            .cw-go-page .cw-go-hero-lead {
+                margin-top: 18px;
+                font-size: 16px;
+            }
+
+            .cw-go-page .cw-go-hero-solution {
+                font-size: 16px;
+            }
+
+            .cw-go-page .cw-go-hero-actions {
+                display: grid;
+                grid-template-columns: 1fr;
+            }
+
+            .cw-go-page .cw-go-btn {
+                width: 100%;
+                min-height: 50px;
+            }
+
+            .cw-go-page .cw-go-section {
+                padding: 66px 0;
+            }
+
+            .cw-go-page .cw-go-section-heading {
+                margin-bottom: 28px;
+            }
+
+            .cw-go-page .cw-go-section-heading h2 {
+                font-size: 33px;
+            }
+
+            .cw-go-page .cw-go-outcome {
+                padding: 25px 22px;
+            }
+
+            .cw-go-page .cw-go-problem-grid {
+                gap: 30px;
+            }
+
+            .cw-go-page .cw-go-problem h2 {
+                font-size: 36px;
+            }
+
+            .cw-go-page .cw-go-checklist {
+                grid-template-columns: 1fr;
+            }
+
+            .cw-go-page .cw-go-packages {
+                grid-template-columns: 1fr;
+            }
+
+            .cw-go-page .cw-go-package {
+                min-height: 0;
+                padding: 25px;
+            }
+
+            .cw-go-page .cw-go-package-badge {
+                position: static;
+                display: inline-flex;
+                width: fit-content;
+                margin-bottom: 10px;
+            }
+
+            .cw-go-page .cw-go-package-price {
+                font-size: 39px;
+            }
+
+            .cw-go-page .cw-go-contact-panel,
+            .cw-go-page .cw-go-form-panel {
+                padding: 25px;
+            }
+
+            .cw-go-page .cw-go-form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cw-go-page .cw-go-contact-strip {
+                grid-template-columns: 1fr;
+            }
+
+            .cw-go-page .cw-go-contact-strip > div,
+            .cw-go-page .cw-go-contact-strip > div:nth-child(2) {
+                border-right: 0;
+                border-bottom: 1px solid var(--cw-go-line);
+            }
+
+            .cw-go-page .cw-go-contact-strip > div:last-child {
+                border-bottom: 0;
+            }
+
+            .cw-go-page .cw-go-footer {
+                padding-bottom: 86px;
+            }
+
+            .cw-go-page .cw-go-footer-main {
+                flex-direction: column;
+                gap: 25px;
+            }
+
+            .cw-go-page .cw-go-footer-contact {
+                text-align: left;
+            }
+
+            .cw-go-page .cw-go-footer-bottom {
+                flex-direction: column;
+            }
+
+            .cw-go-page .cw-go-float-wa {
+                display: none;
+            }
+
+            .cw-go-page .cw-go-mobile-bar {
+                display: grid;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .cw-go-page *,
+            .cw-go-page *::before,
+            .cw-go-page *::after {
+                scroll-behavior: auto !important;
+                animation-duration: .01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: .01ms !important;
+            }
+
+            .cw-go-page .cw-go-reveal {
+                opacity: 1;
+                transform: none;
+            }
+        }
+    </style>
+</head>
+
+<body class="cw-go-page">
+
+<a class="cw-go-skip" href="#cw-go-main">Skip to content</a>
+
+<header class="cw-go-header">
+    <div class="cw-go-shell cw-go-header-inner">
+        <a class="cw-go-logo" href="https://catwebs.in/" aria-label="CatWebs home">
+            <img src="assets/images/webp/logo.webp" alt="CatWebs.in — Digital Growth Partner" width="176" height="58">
+        </a>
+
+        <div class="cw-go-header-actions">
+            <a class="cw-go-header-link" href="tel:+919643926125">Call +91 96439 26125</a>
+            <a class="cw-go-btn cw-go-btn-whatsapp" data-cw-go-wa href="https://wa.me/919643926125" target="_blank" rel="noopener">
+                <span aria-hidden="true">WhatsApp</span>
+            </a>
+        </div>
+    </div>
+</header>
+
+<main id="cw-go-main">
+
+    <!-- PERSONALIZED HERO -->
+    <section class="cw-go-hero">
+        <div class="cw-go-shell cw-go-hero-grid">
+
+            <div class="cw-go-hero-copy cw-go-reveal">
+                <div class="cw-go-campaign-label" id="cw-go-campaign-label">CATWEBS LOCAL BUSINESS CHECK</div>
+
+                <h1 id="cw-go-hero-title">
+                    IS YOUR BUSINESS <span>GETTING FOUND</span> ONLINE?
+                </h1>
+
+                <p class="cw-go-hero-lead" id="cw-go-hero-lead">
+                    Get found. Build trust. Get contacted. CatWebs helps local businesses build a professional digital presence across Google, websites and WhatsApp.
+                </p>
+
+                <div class="cw-go-hero-solution" id="cw-go-hero-solution">
+                    Your customers are already checking online. Make it easy for them to find, trust and contact your business.
+                </div>
+
+                <div class="cw-go-hero-actions">
+                    <a class="cw-go-btn cw-go-btn-primary" href="#cw-go-check" data-cw-go-check>
+                        CHECK MY BUSINESS
+                    </a>
+                    <a class="cw-go-btn cw-go-btn-whatsapp" data-cw-go-wa href="https://wa.me/919643926125" target="_blank" rel="noopener">
+                        WHATSAPP CATWEBS
+                    </a>
+                    <a class="cw-go-btn cw-go-btn-outline" href="tel:+919643926125">
+                        CALL NOW
+                    </a>
+                </div>
+
+                <p class="cw-go-hero-note" id="cw-go-hero-note">
+                    Greater Noida · Noida · NCR
+                </p>
+            </div>
+
+            <aside class="cw-go-hero-side cw-go-reveal" aria-label="CatWebs local business check">
+                <div class="cw-go-check-panel">
+                    <div class="cw-go-check-label">WHAT WE CHECK</div>
+                    <h2>Your digital front door.</h2>
+                    <p>We look at the places customers are most likely to check before contacting a local business.</p>
+
+                    <div class="cw-go-mini-flow">
+                        <div class="cw-go-mini-flow-item">
+                            <strong>GOOGLE</strong>
+                            <span>Get found</span>
+                        </div>
+                        <div class="cw-go-mini-flow-item">
+                            <strong>WEBSITE</strong>
+                            <span>Build trust</span>
+                        </div>
+                        <div class="cw-go-mini-flow-item">
+                            <strong>WHATSAPP</strong>
+                            <span>Get contacted</span>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+        </div>
+    </section>
+
+    <!-- THREE OUTCOMES -->
+    <section id="local" class="cw-go-section">
+        <div class="cw-go-shell">
+
+            <div class="cw-go-section-heading cw-go-centered cw-go-reveal">
+                <div class="cw-go-kicker">YOUR DIGITAL FRONT DOOR</div>
+                <h2>YOUR BUSINESS SHOULD BE EASY TO FIND, TRUST &amp; CONTACT.</h2>
+                <p>CatWebs focuses on three practical outcomes that matter to a local customer.</p>
+            </div>
+
+            <div class="cw-go-outcomes">
+                <article class="cw-go-outcome cw-go-reveal">
+                    <div class="cw-go-outcome-number">01</div>
+                    <h3>Google</h3>
+                    <p><strong>Get Found.</strong> Make your business information easier to discover and understand.</p>
+                </article>
+
+                <article class="cw-go-outcome cw-go-reveal">
+                    <div class="cw-go-outcome-number">02</div>
+                    <h3>Website</h3>
+                    <p><strong>Build Trust.</strong> Give customers a professional place to check your business before they choose.</p>
+                </article>
+
+                <article class="cw-go-outcome cw-go-reveal">
+                    <div class="cw-go-outcome-number">03</div>
+                    <h3>WhatsApp</h3>
+                    <p><strong>Get Contacted.</strong> Make enquiries, calls and next steps easy from a phone.</p>
+                </article>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- GOOGLE -->
+    <section id="google" class="cw-go-section cw-go-section-soft cw-go-topic-section">
+        <div class="cw-go-shell cw-go-problem-grid">
+
+            <div class="cw-go-problem cw-go-reveal">
+                <div class="cw-go-problem-label">GOOGLE VISIBILITY</div>
+                <h2>Can customers find your business on Google?</h2>
+            </div>
+
+            <div class="cw-go-solution cw-go-reveal">
+                <div class="cw-go-solution-box">
+                    <strong>The problem</strong>
+                    <p>Customers often search Google before visiting a local business. If your information is incomplete, unclear or disconnected from a useful website, the customer has less to work with.</p>
+                </div>
+
+                <div class="cw-go-solution-box">
+                    <strong>The CatWebs solution</strong>
+                    <p>We help establish a professional digital presence around your Google Business Profile, website and local search visibility.</p>
+                </div>
+
+                <ul class="cw-go-checklist">
+                    <li>Business information</li>
+                    <li>Website connection</li>
+                    <li>Maps and directions</li>
+                    <li>Click-to-call path</li>
+                    <li>WhatsApp enquiry path</li>
+                    <li>Basic local SEO foundations</li>
+                </ul>
+
+                <div class="cw-go-section-cta">
+                    <a class="cw-go-btn cw-go-btn-primary" href="#cw-go-check" data-cw-go-check>CHECK MY BUSINESS</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- WEBSITE -->
+    <section id="website" class="cw-go-section cw-go-topic-section">
+        <div class="cw-go-shell cw-go-problem-grid">
+
+            <div class="cw-go-problem cw-go-reveal">
+                <div class="cw-go-problem-label">WEBSITE</div>
+                <h2>Does your business still look offline?</h2>
+            </div>
+
+            <div class="cw-go-solution cw-go-reveal">
+                <div class="cw-go-solution-box">
+                    <strong>The problem</strong>
+                    <p>Customers check online before they choose. An outdated, missing or unclear website can make it harder to understand what you offer.</p>
+                </div>
+
+                <div class="cw-go-solution-box">
+                    <strong>The CatWebs solution</strong>
+                    <p>We build focused, mobile-first websites that explain your business clearly and create a direct path to contact.</p>
+                </div>
+
+                <ul class="cw-go-checklist">
+                    <li>Professional business presentation</li>
+                    <li>Mobile-first layout</li>
+                    <li>Services and key information</li>
+                    <li>Click-to-call</li>
+                    <li>WhatsApp CTA</li>
+                    <li>Basic SEO metadata</li>
+                </ul>
+
+                <div class="cw-go-section-cta">
+                    <a class="cw-go-btn cw-go-btn-primary" href="#cw-go-packages" data-cw-go-package>VIEW LOCAL SOLUTIONS</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="cw-go-section cw-go-section-soft cw-go-topic-section">
+        <div class="cw-go-shell cw-go-problem-grid">
+
+            <div class="cw-go-problem cw-go-reveal">
+                <div class="cw-go-problem-label">DIRECT CONTACT</div>
+                <h2>Are customers struggling to contact you?</h2>
+            </div>
+
+            <div class="cw-go-solution cw-go-reveal">
+                <div class="cw-go-solution-box">
+                    <strong>The problem</strong>
+                    <p>Finding a business is only useful if the next step is obvious. Customers should not have to search for a phone number, WhatsApp link or directions.</p>
+                </div>
+
+                <div class="cw-go-solution-box">
+                    <strong>The CatWebs solution</strong>
+                    <p>We connect your digital presence to practical contact paths so customers can call, WhatsApp, find your location or request information.</p>
+                </div>
+
+                <ul class="cw-go-checklist">
+                    <li>Click-to-call</li>
+                    <li>WhatsApp CTA</li>
+                    <li>Google Maps link</li>
+                    <li>Business hours</li>
+                    <li>Contact information</li>
+                    <li>Clear enquiry paths</li>
+                </ul>
+
+                <div class="cw-go-section-cta">
+                    <a class="cw-go-btn cw-go-btn-whatsapp" data-cw-go-wa href="https://wa.me/919643926125" target="_blank" rel="noopener">WHATSAPP CATWEBS</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- WHATSAPP -->
+    <section id="whatsapp" class="cw-go-section cw-go-topic-section">
+        <div class="cw-go-shell cw-go-problem-grid">
+
+            <div class="cw-go-problem cw-go-reveal">
+                <div class="cw-go-problem-label">WHATSAPP</div>
+                <h2>Are customers missing your WhatsApp?</h2>
+            </div>
+
+            <div class="cw-go-solution cw-go-reveal">
+                <div class="cw-go-solution-box">
+                    <strong>The problem</strong>
+                    <p>If a customer cannot reach you quickly from their phone, an enquiry can stop before it starts.</p>
+                </div>
+
+                <div class="cw-go-solution-box">
+                    <strong>The CatWebs solution</strong>
+                    <p>Make it easy for customers to reach your business in one tap with clear WhatsApp and contact paths.</p>
+                </div>
+
+                <ul class="cw-go-checklist">
+                    <li>Click-to-WhatsApp CTA</li>
+                    <li>Prefilled enquiry message</li>
+                    <li>Mobile-first contact flow</li>
+                    <li>Website integration</li>
+                    <li>Call and WhatsApp options</li>
+                    <li>Clear next steps</li>
+                </ul>
+
+                <div class="cw-go-section-cta">
+                    <a class="cw-go-btn cw-go-btn-whatsapp" data-cw-go-wa href="https://wa.me/919643926125" target="_blank" rel="noopener">CONNECT MY BUSINESS</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- TRUST -->
+    <section id="trust" class="cw-go-section cw-go-section-soft cw-go-topic-section">
+        <div class="cw-go-shell cw-go-problem-grid">
+
+            <div class="cw-go-problem cw-go-reveal">
+                <div class="cw-go-problem-label">TRUST ONLINE</div>
+                <h2>Does your business look trustworthy online?</h2>
+            </div>
+
+            <div class="cw-go-solution cw-go-reveal">
+                <div class="cw-go-solution-box">
+                    <strong>The problem</strong>
+                    <p>Customers compare businesses quickly. A weak or inconsistent digital presence can make it difficult to communicate professionalism.</p>
+                </div>
+
+                <div class="cw-go-solution-box">
+                    <strong>The CatWebs solution</strong>
+                    <p>We create a clear digital front door that presents your business, services, contact details and key information professionally.</p>
+                </div>
+
+                <ul class="cw-go-checklist">
+                    <li>Professional website structure</li>
+                    <li>Clear business information</li>
+                    <li>Consistent presentation</li>
+                    <li>Mobile-friendly experience</li>
+                    <li>Contact and enquiry paths</li>
+                    <li>SEO-ready foundations</li>
+                </ul>
+
+                <div class="cw-go-section-cta">
+                    <a class="cw-go-btn cw-go-btn-primary" href="#cw-go-check" data-cw-go-check>GET MY BUSINESS CHECKED</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- PACKAGES -->
+    <section id="cw-go-packages" class="cw-go-section">
+        <div class="cw-go-shell">
+
+            <div class="cw-go-section-heading cw-go-centered cw-go-reveal">
+                <div class="cw-go-kicker">LOCAL SOLUTIONS</div>
+                <h2>Choose the level that fits your business.</h2>
+                <p>Two focused local packages. No unnecessary complexity.</p>
+            </div>
+
+            <div class="cw-go-packages">
+
+                <article class="cw-go-package cw-go-package-featured cw-go-reveal">
+                    <div class="cw-go-package-badge">LOWER-COST START</div>
+                    <div class="cw-go-package-label">LOCAL EXPRESS</div>
+                    <h3>₹4,499</h3>
+                    <div class="cw-go-package-title">Get Found on Google &amp; WhatsApp</div>
+
+                    <ul class="cw-go-package-list">
+                        <li>Single-page high-conversion website</li>
+                        <li>Google Business Profile setup/verification support</li>
+                        <li>Click-to-WhatsApp CTA</li>
+                        <li>Click-to-call</li>
+                        <li>Google Map</li>
+                        <li>Store hours</li>
+                        <li>Basic mobile SEO</li>
+                        <li>Metadata</li>
+                        <li>1 revision within 7 days</li>
+                    </ul>
+
+                    <a class="cw-go-btn cw-go-btn-primary" href="#cw-go-check" data-cw-go-package>GET STARTED</a>
+                </article>
+
+                <article class="cw-go-package cw-go-reveal">
+                    <div class="cw-go-package-label">LOCAL AUTHORITY</div>
+                    <h3>₹8,999</h3>
+                    <div class="cw-go-package-title">The Complete Digital Front Office</div>
+
+                    <ul class="cw-go-package-list">
+                        <li>Everything in Local Express</li>
+                        <li>3–4 page website</li>
+                        <li>Custom .in or .com domain configuration</li>
+                        <li>Professional business email routing</li>
+                        <li>LocalBusiness JSON-LD</li>
+                        <li>Google review link integration</li>
+                        <li>1 revision within 7 days</li>
+                    </ul>
+
+                    <a class="cw-go-btn cw-go-btn-outline" href="#cw-go-check" data-cw-go-package>DISCUSS THIS PACKAGE</a>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY CATWEBS -->
+    <section class="cw-go-section cw-go-section-soft">
+        <div class="cw-go-shell cw-go-why-grid">
+
+            <div class="cw-go-section-heading cw-go-reveal">
+                <div class="cw-go-kicker">WHY CATWEBS</div>
+                <h2>Useful digital work. Without unnecessary complexity.</h2>
+                <p>CatWebs is built around practical digital foundations for local businesses in Greater Noida, Noida and NCR.</p>
+            </div>
+
+            <div class="cw-go-why-list">
+
+                <div class="cw-go-why-item cw-go-reveal">
+                    <span>01</span>
+                    <div>
+                        <h3>Business-first</h3>
+                        <p>We start with what customers need to understand and what your business needs them to do next.</p>
+                    </div>
+                </div>
+
+                <div class="cw-go-why-item cw-go-reveal">
+                    <span>02</span>
+                    <div>
+                        <h3>Local-business focused</h3>
+                        <p>Google, website, WhatsApp, calls and directions are treated as one connected customer journey.</p>
+                    </div>
+                </div>
+
+                <div class="cw-go-why-item cw-go-reveal">
+                    <span>03</span>
+                    <div>
+                        <h3>Practical technology</h3>
+                        <p>We prefer lightweight, maintainable solutions where a simple approach is the right approach.</p>
+                    </div>
+                </div>
+
+                <div class="cw-go-why-item cw-go-reveal">
+                    <span>04</span>
+                    <div>
+                        <h3>Clear communication</h3>
+                        <p>No inflated promises. We focus on a professional digital foundation you can actually use.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CONVERSION / FORM -->
+    <section id="cw-go-check" class="cw-go-section cw-go-section-soft">
+        <div class="cw-go-shell">
+
+            <div class="cw-go-section-heading cw-go-centered cw-go-reveal">
+                <div class="cw-go-kicker">FREE BUSINESS CHECK</div>
+                <h2>LET'S CHECK YOUR BUSINESS.</h2>
+                <p>Send us your business details and we'll tell you where your online presence can improve.</p>
+            </div>
+
+            <div class="cw-go-check-wrap">
+
+                <aside class="cw-go-contact-panel cw-go-reveal">
+                    <div class="cw-go-kicker">DIRECT CONTACT</div>
+                    <h2>Want to talk now?</h2>
+                    <p>WhatsApp is the fastest way to start. You can also call or email CatWebs.</p>
+
+                    <div class="cw-go-direct">
+                        <a data-cw-go-wa href="https://wa.me/919643926125" target="_blank" rel="noopener">
+                            <span aria-hidden="true">●</span>
+                            <span>WhatsApp Business</span>
+                        </a>
+                        <a href="tel:+919643926125">
+                            <span aria-hidden="true">☎</span>
+                            <span>+91 96439 26125</span>
+                        </a>
+                        <a href="mailto:hello@catwebs.in">
+                            <span aria-hidden="true">✉</span>
+                            <span>hello@catwebs.in</span>
+                        </a>
+                        <a href="mailto:support@catwebs.in">
+                            <span aria-hidden="true">✉</span>
+                            <span>support@catwebs.in</span>
+                        </a>
+                    </div>
+                </aside>
+
+                <div class="cw-go-form-panel cw-go-reveal">
+                    <h3>Get my business checked</h3>
+                    <p class="cw-go-form-note">A short form. No complicated agency questionnaire.</p>
+
+                    <form class="cw-go-form" action="https://api.web3forms.com/submit" method="POST" id="cw-go-form">
+
+                        <input type="hidden" name="access_key" value="172c3dbb-b594-4053-9f1d-7ac1c7ad9638">
+                        <input type="hidden" name="subject" value="New CatWebs Local Business Check">
+                        <input type="hidden" name="from_name" value="CatWebs Go Campaign">
+                        <input type="hidden" name="redirect" value="https://catwebs.in/thank-you.html">
+
+                        <input type="hidden" name="campaign_source" id="cw-go-source" value="st10-universal">
+                        <input type="hidden" name="campaign_name" id="cw-go-campaign" value="ST10 Universal">
+                        <input type="hidden" name="landing_page" id="cw-go-landing" value="https://catwebs.in/go.html">
+                        <input type="hidden" name="referrer" id="cw-go-referrer" value="">
+                        <input type="hidden" name="timestamp" id="cw-go-timestamp" value="">
+
+                        <div class="cw-go-form-grid">
+                            <div class="cw-go-field">
+                                <label for="cw-go-business">Business Name *</label>
+                                <input id="cw-go-business" name="business_name" type="text" placeholder="Your business name" required>
+                            </div>
+
+                            <div class="cw-go-field">
+                                <label for="cw-go-name">Your Name *</label>
+                                <input id="cw-go-name" name="name" type="text" placeholder="Your name" required>
+                            </div>
+                        </div>
+
+                        <div class="cw-go-form-grid">
+                            <div class="cw-go-field">
+                                <label for="cw-go-phone">Phone / WhatsApp *</label>
+                                <input id="cw-go-phone" name="phone" type="tel" inputmode="tel" placeholder="+91" required>
+                            </div>
+
+                            <div class="cw-go-field">
+                                <label for="cw-go-type">Business Type *</label>
+                                <input id="cw-go-type" name="business_type" type="text" placeholder="Clinic, shop, coaching, etc." required>
+                            </div>
+                        </div>
+
+                        <div class="cw-go-form-grid">
+                            <div class="cw-go-field">
+                                <label for="cw-go-area">Area / Locality *</label>
+                                <input id="cw-go-area" name="area_locality" type="text" placeholder="Greater Noida, Noida, etc." required>
+                            </div>
+
+                            <div class="cw-go-field">
+                                <label for="cw-go-need">What do you need? *</label>
+                                <select id="cw-go-need" name="requirement" required>
+                                    <option value="">Select one</option>
+                                    <option value="Website">Website</option>
+                                    <option value="Google Business Profile">Google Business Profile</option>
+                                    <option value="WhatsApp setup">WhatsApp setup</option>
+                                    <option value="Complete Local Presence">Complete Local Presence</option>
+                                    <option value="Not sure">Not sure</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <button class="cw-go-btn cw-go-btn-primary cw-go-form-submit" type="submit">
+                            GET MY BUSINESS CHECK
+                        </button>
+
+                        <p class="cw-go-form-status" id="cw-go-form-status" aria-live="polite"></p>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT STRIP -->
+    <section class="cw-go-section" style="padding-top:0;">
+        <div class="cw-go-shell">
+            <div class="cw-go-contact-strip">
+                <div>
+                    <strong>CATWEBS.IN</strong>
+                    <span>Digital Growth Partner</span>
+                </div>
+                <div>
+                    <strong>WEBSITES</strong>
+                    <span>Build trust online</span>
+                </div>
+                <div>
+                    <strong>GOOGLE</strong>
+                    <span>Get found locally</span>
+                </div>
+                <div>
+                    <strong>WHATSAPP</strong>
+                    <span>Get contacted</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer class="cw-go-footer">
+    <div class="cw-go-shell">
+
+        <div class="cw-go-footer-main">
+            <div class="cw-go-footer-brand">
+                <img src="assets/images/webp/logo.webp" alt="CatWebs.in" width="150" height="50">
+                <p>Digital Growth Partner · Websites · Google · WhatsApp<br>Greater Noida · Noida · NCR</p>
+            </div>
+
+            <div class="cw-go-footer-contact">
+                <a href="tel:+919643926125">+91 96439 26125</a>
+                <a href="https://wa.me/919643926125" target="_blank" rel="noopener">WhatsApp Business</a>
+                <a href="mailto:hello@catwebs.in">hello@catwebs.in</a>
+                <span>support@catwebs.in</span>
+            </div>
+        </div>
+
+        <div class="cw-go-footer-bottom">
+            <span>© <span id="cw-go-year">2026</span> CatWebs. All Rights Reserved.</span>
+            <span>Local business digital growth</span>
+        </div>
+
+    </div>
+</footer>
+
+<a class="cw-go-float-wa" data-cw-go-wa href="https://wa.me/919643926125" target="_blank" rel="noopener" aria-label="WhatsApp CatWebs">
+    <svg viewBox="0 0 32 32" aria-hidden="true">
+        <path d="M16 3.2A12.7 12.7 0 0 0 5 22.2L3.5 28.5l6.5-1.7A12.7 12.7 0 1 0 16 3.2Zm0 23.1c-2 0-4-.5-5.7-1.5l-.4-.2-3.8 1 1-3.7-.2-.4a10.4 10.4 0 1 1 9.1 4.8Zm5.7-7.8c-.3-.2-1.7-.9-2-.9-.3-.1-.5-.1-.7.2l-.9 1.1c-.2.2-.4.3-.7.1-1.7-.8-2.9-1.5-4-3.4-.3-.5.3-.5.8-1.6.1-.2 0-.4-.1-.6-.1-.2-.7-1.7-.9-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.7s1.2 3.1 1.4 3.3c.2.2 2.3 3.5 5.6 4.9 2.1.9 2.6.8 3.1.7.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.1-1.4-.1-.2-.3-.3-.6-.4Z"/>
+    </svg>
+</a>
+
+<div class="cw-go-mobile-bar">
+    <a class="cw-go-mobile-wa" data-cw-go-wa href="https://wa.me/919643926125" target="_blank" rel="noopener">
+        WhatsApp
+    </a>
+    <a class="cw-go-mobile-call" href="tel:+919643926125">
+        Call CatWebs
+    </a>
+</div>
+
+<script>
+(function () {
+    "use strict";
+
+    document.addEventListener("DOMContentLoaded", function () {
+        var campaigns = {
+            "st2-google": {
+                name: "ST2 Google Visibility Check",
+                label: "YOU SCANNED OUR GOOGLE VISIBILITY CHECK",
+                title: "CAN CUSTOMERS FIND YOUR BUSINESS ON <span>GOOGLE?</span>",
+                lead: "Your customers are searching. Make sure they can find you.",
+                solution: "CatWebs helps local businesses build a stronger Google + website + WhatsApp presence.",
+                cta: "GET MY BUSINESS CHECKED",
+                target: "google"
+            },
+            "st2-website": {
+                name: "ST2 Website Check",
+                label: "YOU SCANNED OUR WEBSITE CHECK",
+                title: "NO PROFESSIONAL <span>WEBSITE?</span>",
+                lead: "Customers check online before they choose.",
+                solution: "Build a professional digital presence that gives customers a clear place to understand and trust your business.",
+                cta: "BUILD TRUST ONLINE",
+                target: "website"
+            },
+            "st2-contact": {
+                name: "ST2 Contact Check",
+                label: "YOU SCANNED OUR CONTACT CHECK",
+                title: "ARE CUSTOMERS STRUGGLING TO <span>CONTACT YOU?</span>",
+                lead: "Make it easy to call, WhatsApp and find your business.",
+                solution: "CatWebs connects your digital presence to practical contact paths for local customers.",
+                cta: "MAKE CONTACT EASY",
+                target: "contact"
+            },
+            "st10-google": {
+                name: "ST10 Google Check",
+                label: "YOU SCANNED OUR GOOGLE CHECK",
+                title: "CAN CUSTOMERS FIND YOUR BUSINESS ON <span>GOOGLE?</span>",
+                lead: "Your customers are searching. Make sure they can find you.",
+                solution: "Get found. Build trust. Get contacted through a connected Google + website + WhatsApp presence.",
+                cta: "GET MY BUSINESS CHECKED",
+                target: "google"
+            },
+            "st10-website": {
+                name: "ST10 Website Check",
+                label: "YOU SCANNED OUR WEBSITE CHECK",
+                title: "DOES YOUR BUSINESS STILL LOOK <span>OFFLINE?</span>",
+                lead: "Customers check online before they choose.",
+                solution: "Build a professional digital front door for your business across website, Google and WhatsApp.",
+                cta: "BUILD TRUST ONLINE",
+                target: "website"
+            },
+            "st10-whatsapp": {
+                name: "ST10 WhatsApp Campaign",
+                label: "YOU SCANNED OUR WHATSAPP CAMPAIGN",
+                title: "ARE CUSTOMERS MISSING YOUR <span>WHATSAPP?</span>",
+                lead: "Make enquiries one tap away.",
+                solution: "Make it easy for customers to reach your business in one tap.",
+                cta: "CONNECT MY BUSINESS",
+                target: "whatsapp"
+            },
+            "st10-trust": {
+                name: "ST10 Trust Campaign",
+                label: "YOU SCANNED OUR TRUST CHECK",
+                title: "DOES YOUR BUSINESS LOOK <span>TRUSTWORTHY ONLINE?</span>",
+                lead: "Build a professional digital presence.",
+                solution: "CatWebs helps local businesses present their services, information and contact paths professionally online.",
+                cta: "BUILD TRUST ONLINE",
+                target: "trust"
+            },
+            "st10-universal": {
+                name: "ST10 Universal Local Campaign",
+                label: "CATWEBS LOCAL BUSINESS CHECK",
+                title: "IS YOUR BUSINESS <span>GETTING FOUND</span> ONLINE?",
+                lead: "Get found. Build trust. Get contacted.",
+                solution: "CatWebs helps local businesses build a professional digital presence across Google, websites and WhatsApp.",
+                cta: "CHECK MY BUSINESS",
+                target: "local"
+            }
+        };
+
+        var params = new URLSearchParams(window.location.search);
+        var source = params.get("src") || "st10-universal";
+        var campaign = campaigns[source] || campaigns["st10-universal"];
+        var hash = (window.location.hash || "").replace("#", "").toLowerCase();
+
+        var title = document.getElementById("cw-go-hero-title");
+        var lead = document.getElementById("cw-go-hero-lead");
+        var solution = document.getElementById("cw-go-hero-solution");
+        var label = document.getElementById("cw-go-campaign-label");
+        var sourceField = document.getElementById("cw-go-source");
+        var campaignField = document.getElementById("cw-go-campaign");
+        var landingField = document.getElementById("cw-go-landing");
+        var referrerField = document.getElementById("cw-go-referrer");
+        var timestampField = document.getElementById("cw-go-timestamp");
+        var form = document.getElementById("cw-go-form");
+        var status = document.getElementById("cw-go-form-status");
+        var year = document.getElementById("cw-go-year");
+
+        label.textContent = campaign.label;
+        title.innerHTML = campaign.title;
+        lead.textContent = campaign.lead;
+        solution.textContent = campaign.solution;
+
+        sourceField.value = source;
+        campaignField.value = campaign.name;
+        landingField.value = window.location.href;
+        referrerField.value = document.referrer || "Direct / QR";
+        timestampField.value = new Date().toISOString();
+
+        if (year) {
+            year.textContent = String(new Date().getFullYear());
+        }
+
+        var messageBySource = {
+            "st2-google": "Hi CatWebs, I scanned your Google visibility campaign and would like a free business check.",
+            "st2-website": "Hi CatWebs, I scanned your website campaign and would like to discuss a professional website for my business.",
+            "st2-contact": "Hi CatWebs, I scanned your contact campaign and would like to make it easier for customers to contact my business.",
+            "st10-google": "Hi CatWebs, I scanned your Google campaign and would like a free business check.",
+            "st10-website": "Hi CatWebs, I scanned your website campaign and would like to discuss a professional website for my business.",
+            "st10-whatsapp": "Hi CatWebs, I scanned your WhatsApp campaign and would like to connect my business.",
+            "st10-trust": "Hi CatWebs, I scanned your trust campaign and would like to discuss a professional digital presence.",
+            "st10-universal": "Hi CatWebs, I scanned your local business campaign and would like a free business check."
+        };
+
+        var message = messageBySource[source] || messageBySource["st10-universal"];
+        var waUrl = "https://wa.me/919643926125?text=" + encodeURIComponent(message);
+
+        document.querySelectorAll("[data-cw-go-wa]").forEach(function (link) {
+            link.href = waUrl;
+        });
+
+        document.querySelectorAll("[data-cw-go-check]").forEach(function (link) {
+            link.addEventListener("click", function () {
+                setTimeout(function () {
+                    var field = document.getElementById("cw-go-business");
+                    if (field) field.focus({ preventScroll: true });
+                }, 650);
+            });
+        });
+
+        if (hash && document.getElementById(hash)) {
+            window.setTimeout(function () {
+                var target = document.getElementById(hash);
+                if (target) {
+                    target.classList.add("cw-go-topic-active");
+                    target.scrollIntoView({ behavior: "smooth", block: "start" });
+                    window.setTimeout(function () {
+                        target.classList.remove("cw-go-topic-active");
+                    }, 2400);
+                }
+            }, 900);
+        } else if (campaign.target && campaign.target !== "local") {
+            window.setTimeout(function () {
+                var target = document.getElementById(campaign.target);
+                if (target) {
+                    target.classList.add("cw-go-topic-active");
+                    window.setTimeout(function () {
+                        target.classList.remove("cw-go-topic-active");
+                    }, 2400);
+                }
+            }, 1200);
+        }
+
+        var observer = new IntersectionObserver(function (entries, obs) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("cw-go-visible");
+                    obs.unobserve(entry.target);
+                }
+            });
+        }, { threshold: .08 });
+
+        document.querySelectorAll(".cw-go-reveal").forEach(function (el) {
+            observer.observe(el);
+        });
+
+        var formStarted = false;
+
+        form.addEventListener("focusin", function () {
+            if (!formStarted) {
+                formStarted = true;
+                if (typeof window.gtag === "function") {
+                    window.gtag("event", "form_start", { campaign_source: source });
+                }
+            }
+        });
+
+        form.addEventListener("submit", function () {
+            timestampField.value = new Date().toISOString();
+
+            if (typeof window.gtag === "function") {
+                window.gtag("event", "form_submit", { campaign_source: source });
+            }
+
+            status.textContent = "Sending your business check request…";
+        });
+
+        document.querySelectorAll("[data-cw-go-package]").forEach(function (link) {
+            link.addEventListener("click", function () {
+                if (typeof window.gtag === "function") {
+                    window.gtag("event", "package_click", { campaign_source: source });
+                }
+            });
+        });
+
+        document.querySelectorAll("[data-cw-go-wa]").forEach(function (link) {
+            link.addEventListener("click", function () {
+                if (typeof window.gtag === "function") {
+                    window.gtag("event", "whatsapp_click", { campaign_source: source });
+                }
+            });
+        });
+
+        document.querySelectorAll('a[href^="tel:"]').forEach(function (link) {
+            link.addEventListener("click", function () {
+                if (typeof window.gtag === "function") {
+                    window.gtag("event", "call_click", { campaign_source: source });
+                }
+            });
+        });
+
+        if (typeof window.gtag === "function") {
+            window.gtag("event", "qr_landing", {
+                campaign_source: source,
+                campaign_name: campaign.name
+            });
+        }
+    });
+})();
+</script>
+
+</body>
+</html>
