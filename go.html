@@ -1641,13 +1641,16 @@
                     <h3>Get my business checked</h3>
                     <p class="cw-go-form-note">A short form. No complicated agency questionnaire.</p>
 
+                    <!-- Native POST: same Web3Forms endpoint and access key used by contact.html. -->
                     <form class="cw-go-form" action="https://api.web3forms.com/submit" method="POST" id="cw-go-form">
 
                         <input type="hidden" name="access_key" value="172c3dbb-b594-4053-9f1d-7ac1c7ad9638">
-                        <input type="hidden" name="subject" value="New CatWebs Local Business Check">
-                        <input type="hidden" name="from_name" value="CatWebs Go Campaign">
+                        <input type="hidden" name="subject" value="New Local Business Check From CatWebs /go">
+                        <input type="hidden" name="from_name" value="CatWebs /go Campaign">
                         <input type="hidden" name="redirect" value="https://catwebs.in/thank-you.html">
+                        <input type="checkbox" name="botcheck" style="display:none">
 
+                        <!-- Campaign attribution fields are added to the same Web3Forms submission. -->
                         <input type="hidden" name="campaign_source" id="cw-go-source" value="st10-universal">
                         <input type="hidden" name="campaign_name" id="cw-go-campaign" value="ST10 Universal">
                         <input type="hidden" name="landing_page" id="cw-go-landing" value="https://catwebs.in/go.html">
@@ -1657,19 +1660,19 @@
                         <div class="cw-go-form-grid">
                             <div class="cw-go-field">
                                 <label for="cw-go-business">Business Name *</label>
-                                <input id="cw-go-business" name="business_name" type="text" placeholder="Your business name" required>
+                                <input id="cw-go-business" name="organization" type="text" placeholder="Your business name" required>
                             </div>
 
                             <div class="cw-go-field">
                                 <label for="cw-go-name">Your Name *</label>
-                                <input id="cw-go-name" name="name" type="text" placeholder="Your name" required>
+                                <input id="cw-go-name" name="name" type="text" autocomplete="name" placeholder="Your name" required>
                             </div>
                         </div>
 
                         <div class="cw-go-form-grid">
                             <div class="cw-go-field">
                                 <label for="cw-go-phone">Phone / WhatsApp *</label>
-                                <input id="cw-go-phone" name="phone" type="tel" inputmode="tel" placeholder="+91" required>
+                                <input id="cw-go-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+91" required>
                             </div>
 
                             <div class="cw-go-field">
@@ -1681,20 +1684,25 @@
                         <div class="cw-go-form-grid">
                             <div class="cw-go-field">
                                 <label for="cw-go-area">Area / Locality *</label>
-                                <input id="cw-go-area" name="area_locality" type="text" placeholder="Greater Noida, Noida, etc." required>
+                                <input id="cw-go-area" name="location" type="text" placeholder="Greater Noida, Noida, etc." required>
                             </div>
 
                             <div class="cw-go-field">
-                                <label for="cw-go-need">What do you need? *</label>
-                                <select id="cw-go-need" name="requirement" required>
-                                    <option value="">Select one</option>
-                                    <option value="Website">Website</option>
-                                    <option value="Google Business Profile">Google Business Profile</option>
-                                    <option value="WhatsApp setup">WhatsApp setup</option>
-                                    <option value="Complete Local Presence">Complete Local Presence</option>
-                                    <option value="Not sure">Not sure</option>
-                                </select>
+                                <label for="cw-go-email">Email (optional)</label>
+                                <input id="cw-go-email" name="email" type="email" autocomplete="email" placeholder="you@example.com">
                             </div>
+                        </div>
+
+                        <div class="cw-go-field">
+                            <label for="cw-go-need">What do you need? *</label>
+                            <select id="cw-go-need" name="project_type" required>
+                                <option value="">Select one</option>
+                                <option value="Website">Website</option>
+                                <option value="Google Business Profile">Google Business Profile</option>
+                                <option value="WhatsApp setup">WhatsApp setup</option>
+                                <option value="Complete Local Presence">Complete Local Presence</option>
+                                <option value="Not sure">Not sure</option>
+                            </select>
                         </div>
 
                         <button class="cw-go-btn cw-go-btn-primary cw-go-form-submit" type="submit">
